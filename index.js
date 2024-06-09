@@ -16,7 +16,7 @@ function type() {
             } else {
                 setTimeout(() => {
                     setTimeout(deletingEffect, 100);
-                }, 10000);
+                }, 8000);
             }
         }
     }
