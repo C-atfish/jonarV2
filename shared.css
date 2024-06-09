@@ -1,0 +1,57 @@
+:root{
+    --main-bg-color: #73A6AD;
+    --main-accent-color: #bd44c5;
+    --secondary-accent-color: #9B97B2;
+    --secondary-accent-color2: #D8A7CA;
+    --secondary-accent-color3: #C7B8EA;
+    --menu-text-color: #ff7d00;
+
+
+}
+
+body, html {
+
+    font-family: 'VCR OSD Mono', monospace;
+
+}
+
+
+
+
+/*
+
+.content {
+    flex: 1;
+    width: 80%;
+
+    margin: 20px auto;
+}
+
+.no-space {
+    padding: 0;
+    margin: 0;
+
+}
+.footer {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-accent-color2);
+    text-align: center;
+    color: var(--main-accent-color);
+    position: relative;
+}
+
+.footer .social-media a {
+    color: var(--main-accent-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .social-media a:hover {
+    color: var(--secondary-accent-color2);
+}
+
+.footer .social-media {
+    margin-top: 10px;
+}*/

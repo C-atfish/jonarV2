@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/0716b6afca.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body class="bg-main1 text-white">
+<div class="flex flex-col min-h-screen">
+    <!-- HEADER -->
+    <div class="w-full p-4 bg-main4 text-white  text-xl flex justify-center">
+        <nav>
+            <ul class="flex space-x-12">
+                <li class="hover:text-main5"><a href="index.html"><i class="fa-solid fa-house mr-2"></i>Home</a></li>
+                <li class="hover:text-main5"><a href="about.html"><i class="fa-regular fa-address-card mr-2"></i>About</a></li>
+                <li class="hover:text-main5"><a href="projects.html"><i class="fa-solid fa-book mr-2"></i>Projects</a></li>
+                <li class="hover:text-main5"><a href="#contact"><i class="fa-solid fa-address-card mr-2"></i>Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="flex-grow" id="home">
+        <div class="intro bg-main5  m-4 rounded relative">
+            <div class="rounded-r-full bg-main4 md:w-[50vw] lg:w-[40vw] xl:w-[35vw] ">
+                <div class="text-white text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl mb-4 p-4">
+                    <p class="inline">
+                        Hi, I'm Jonar, a
+                    </p>
+                    <p class="inline typer text-main3 underline" id="animated-text-spot"></p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class=" p-4 ">
+                <h4 class="text-2xl font-bold text-center">
+                    My services
+                </h4>
+                <ul class="grid  grid-cols-2 md:grid-cols-4 gap-4">
+                    <li class="max-w-[30vw] border-r-[1px] p-2 bg-blue-400 md:bg-transparent">
+                        <h4 class="text-xl font-bold text-center">
+                            <i class="fa-solid fa-layer-group mr-2"></i>Fullstack web application
+                        </h4>
+                        <p>With a wide variety of <a href="about.html" class="text-blue-400">technical skills</a> i have gathered in different technology stacks,
+                            i can provide a tailor made web application to fit your needs. Anything between a custom designed static landing page to promote your brand,
+                            a store for your business or a customer queue and order system for restaurants with full size database integration.
+                        </p>
+                    </li>
+                    <li class="max-w-[30vw] p-2 bg-blue-400 md:bg-transparent">
+                        <h4 class="text-xl text-center font-bold">
+                            <i class="fa-solid fa-mobile-screen mr-2"></i>Mobile application
+                        </h4>
+                        <p>
+                            I also offer services for mobile applications. Where i can make either a cross platform app, or native ios/android app.
+                            I can help designing the layout,  and design a server for your application.
+                        </p>
+                    </li>
+                    <li class="max-w-[30vw]  border-l-[1px] p-2">
+                        <h4 class="text-xl text-center font-bold">
+                            <i class="fa-solid fa-hammer mr-2"></i>System maintenance and consulation
+                        </h4>
+                        <p class="pl-4">
+                            Maintenance of new and existing systems, structure and design of the architectural aspects,
+                        </p>
+                    </li>
+                    <li class="max-w-[30vw]  border-l-[1px] p-2">
+                        <h4 class="text-xl text-center font-bold">
+                            <i class="fa-solid fa-headphones mr-2"></i>Consultation
+                        </h4>
+                        <p class="pl-4">
+                            Consultation with close followup to make sure we are on the same page. With my services, I can help you set up a more secure and
+                            reliable system. Contact info can be found
+                            <a class="text-blue-400" href="#contact">here</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mt-4">
+                <a href="projects.html" class="bg-main4 p-2 hover:bg-main5 text-white rounded">View peronal Projects</a>
+            </div>
+
+        </div>
+    </div>
+    <div class=" relative w-full p-4 bg-main4 text-center">
+        &copy; 2024 Jonar. All rights reserved.
+        <div class="social-media">
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> |
+            <a href="https://twitter.com/yourusername" target="_blank">Instagram</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="index.js"></script>
+
+</html>
