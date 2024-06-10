@@ -15,13 +15,13 @@
 <body class="bg-main1 text-white overflow-y-hidden">
 <div class="flex flex-col min-h-screen ">
     <!-- HEADER -->
-    <div class="w-full p-4 bg-main4 text-white  text-xl flex justify-center">
+    <div class="w-full p-4 bg-main4 text-white  text-sm md:text-md lg:text-xl flex justify-center">
         <nav>
-            <ul class="flex space-x-12">
+            <ul class="flex space-x-12 text-center">
                 <li class="hover:text-main5"><a href="index.html"><i class="fa-solid fa-house mr-2"></i>Home</a></li>
                 <li class="hover:text-main5"><a href="about.html"><i class="fa-regular fa-address-card mr-2"></i>About</a></li>
                 <li class="hover:text-main5"><a href="projects.html"><i class="fa-solid fa-book mr-2"></i>Projects</a></li>
-                <li class="hover:text-main5"><a href="#contact"><i class="fa-solid fa-address-card mr-2"></i>Contact</a></li>
+                <li class="hover:text-main5"><a href="contact.html"><i class="fa-solid fa-address-card mr-2"></i>Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -41,39 +41,25 @@
         </div>
 
         <!-- MAIN INFO -->
-           <div class="flex bg-main3 text-gray-700">
+           <div class="grid grid-cols-2 bg-main3 text-gray-700">
 
-               <div class="pr-6 mt-4">
-
-
+               <!--PROFILE PICTURE-->
+               <div class="pr-6 mt-4 row-span-2">
                    <div class="relative flex justify-center items-center">
                        <!-- DOWNLOAD CV BUTTON -->
                        <button class="bg-main5 absolute top-6 left-1/2 transform -translate-x-32 rounded-full flex space-x-3 p-2 hover:bg-main4 hover:text-main3">
-                           <i class="fa-solid fa-download"></i>
-                           <p>CV</p>
+                           <i class="fa-solid fa-download mr-2"></i>
+                           CV
                        </button>
                        <img class="w-72 rounded" src="/images/me.png" alt="Image of Jonar">
-                   </div>
-
-                   <div class="mt-6  rounded ml-4">
-                       <h4 class="text-center text-xl font-bold">Education</h4>
-                       <ul class="p-2">
-                           <li class="border-b-[1px] border-gray-500">
-                               <p class="text-start pl-4 text-lg">Bachelor in informationtechonology(Programming) at Kristiania University College.</p>
-
-                           </li>
-                           <li class="border-b-[1px] border-gray-500">
-                               <p class="text-start pl-4 text-lg">Media and communications at Røyken videregående Steinerskole.</p>
-
-                           </li>
-                       </ul>
                    </div>
                </div>
 
 
-               <div class="w-[50vw]">
-                   <div class="text-center bg-gray-500 mb-4 p-4 mt-6 rounded">
-                       <h4 class="text-white text-xl font-bold mt-4">Overview</h4>
+
+               <!--OVERVIEW-->
+                   <div class="text-center bg-gray-500 mb-4 p-4 mt-4 rounded mr-4">
+                       <h4 class="text-white text-xl font-bold ">Overview</h4>
                        <p class="text-white text-start pl-2">From my bachelor in programming i have found my passion for technology, and
                            gathered a wide variety of building blocks in different technologies and languages.
                            As a person, i am structured, efficient and loyal. I am always happy and inspired, no
@@ -82,10 +68,14 @@
                            methodologies, where we have used sprints to break down complex tasks.</p>
                    </div>
 
+
+
+
+
                    <!-- EMPLOYMENT HISTORY -->
-                   <div class="p-4  rounded">
+                   <div class="p-4  rounded row-span-2">
                        <h4 class="text-center font-bold text-lg border-b-[1px]">Employment history</h4>
-                       <div class="overflow-x-auto max-h-[32vh] ">
+                       <div class="overflow-x-auto max-h-[30vh] ">
                            <ul>
                                <!-- EXPERIENCE CARD -->
                                <li class="border-b-[1px]">
@@ -187,8 +177,23 @@
                        </div>
                    </div>
 
-                   <div class="text-center mt-4 mb-4 ">
-                       <div class="w-full overflow-x-hidden relative bg-main5 rounded">
+               <!--EDUCATION-->
+               <div class="mt-6  rounded ml-4">
+                   <h4 class="text-center text-xl font-bold">Education</h4>
+                   <ul class="p-2">
+                       <li class="border-b-[1px] border-gray-500">
+                           <p class="text-start pl-4 text-lg">Bachelor in informationtechonology(Programming) at Kristiania University College.</p>
+
+                       </li>
+                       <li class="border-b-[1px] border-gray-500">
+                           <p class="text-start pl-4 text-lg">Media and communications at Røyken videregående Steinerskole.</p>
+
+                       </li>
+                   </ul>
+               </div>
+
+                   <div class="text-center mt-4 mb-4 col-span-2  mx-auto">
+                       <div class="w-[50vw] overflow-x-hidden relative bg-main5 rounded">
                            <div id="imagesWrapper" class="carousel-inner">
                                <!-- Dynamically created images filled in here -->
                            </div>
@@ -196,7 +201,7 @@
                </div>
 
 
-           </div>
+
 
        </div>
 

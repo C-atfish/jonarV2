@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <script src="https://kit.fontawesome.com/0716b6afca.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body class="bg-main1 text-white">
+<div class="flex flex-col min-h-screen">
+<!-- HEADER -->
+    <div class="w-full p-4 bg-main4 text-white  text-sm md:text-md lg:text-xl flex justify-center">
+        <nav>
+            <ul class="flex space-x-12 text-center">
+                <li class="hover:text-main5"><a href="index.html"><i class="fa-solid fa-house mr-2"></i>Home</a></li>
+                <li class="hover:text-main5"><a href="about.html"><i class="fa-regular fa-address-card mr-2"></i>About</a></li>
+                <li class="hover:text-main5"><a href="projects.html"><i class="fa-solid fa-book mr-2"></i>Projects</a></li>
+                <li class="hover:text-main5"><a href="contact.html"><i class="fa-solid fa-address-card mr-2"></i>Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--MAIN CONTENT-->
+    <div class="flex-grow grid grid-cols-1 place-items-center">
+
+        <!--business card, should be clickable to flip over to display a designed frontside -->
+        <div class="business-card text-md sm:text-lg ">
+            <!--FRONT OF THE BUSINESS CARD-->
+            <div class="card-front bg-gradient-to-r from-main7 to-main5">
+                <i class="fa-solid fa-arrow-right absolute top-4 right-4"></i>
+                <div class=" grid grid-cols-1 p-4 h-full place-items-center text-center">
+                    <div class="">
+                        <img class=" w-12 h-12 md:w-24 md:h-24 rounded-full border-2 border-white shadow-lg" src="images/me.png" alt="Jonar profile picture">
+                    </div>
+                    <div class="flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h4 class="text-xl md:text-2xl font-bold"> Jonar Larsgard</h4>
+                            <h4>Full-stack developer</h4>
+                        </div>
+
+                        <div class="flex space-x-2 md:space-x-6 text-sm md:text-lg">
+                            <div class="border-[1px] p-1 rounded">
+
+                                <h4><i class="fa-solid fa-mobile-screen"></i> +4741792159</h4>
+                            </div>
+                            <div class="border-[1px] p-1 rounded">
+                                <h4><i class="fa-solid fa-envelope"></i> Jonarlarsgard@gmail.com</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--BACK OF THE BUSINESS CARD-->
+            <div class="card-back bg-gradient-to-r from-main5 to-main7 relative overflow-hidden text-white">
+                <i class="fa-solid fa-arrow-left absolute top-4 right-4 text-lg"></i>
+                <div class="grid grid-cols-1 place-items-center h-full p-8">
+                    <div class="text-2xl font-bold tracking-wide uppercase">Jonar</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+<!--        <div class="w-64 text-center bg-main2 p-4">
+            <h4>Contact me directly</h4>
+            <form action="" class="">
+                <div>
+                    <p>From</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>Message</p>
+                    <textarea cols="20" rows="10"></textarea>
+                </div>
+
+            </form>
+        </div>-->
+    </div>
+
+<div class=" relative w-full p-4 bg-main4 text-center">
+    &copy; 2024 Jonar. All rights reserved.
+    <div class="social-media">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> |
+        <a href="https://twitter.com/yourusername" target="_blank">Instagram</a>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    document.querySelector('.business-card').addEventListener('click', function() {
+        this.classList.toggle('flipped');
+    });
+</script>
+</html>
