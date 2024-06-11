@@ -12,6 +12,8 @@ tailwind.config = {
                 main6: '#791a41',
                 // For under menu of typing animation background. "What do i do"
                 main7: '#a42559',
+                // Foreground color
+                main8: '#88737c',
                 carousel: '#394e86',
             }
         }
