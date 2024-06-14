@@ -7,59 +7,98 @@
     <title>Home</title>
     <script src="https://kit.fontawesome.com/0716b6afca.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="content.js"></script>
+    <script src="shared.js"></script>
     <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="index.css">
 
 </head>
 <body class="bg-main1 text-white">
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen overflow-y-hidden">
     <!-- HEADER -->
-    <div class="w-full p-4 bg-main4 text-white  text-sm md:text-md lg:text-xl flex justify-center">
-        <nav>
-            <ul class="flex space-x-12 text-center">
-                <li class="hover:text-main5"><a href="index.html"><i class="fa-solid fa-house mr-2"></i>Home</a></li>
-                <li class="hover:text-main5"><a href="about.html"><i class="fa-regular fa-address-card mr-2"></i>About</a></li>
-                <li class="hover:text-main5"><a href="projects.html"><i class="fa-solid fa-book mr-2"></i>Projects</a></li>
-                <li class="hover:text-main5"><a href="contact.html"><i class="fa-solid fa-address-card mr-2"></i>Contact</a></li>
+    <div class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center">
+        <nav class="flex">
+            <ul class="flex space-x-8 md:space-x-10 lg:space-x-12 text-center">
+                <li class="hover:text-main5">
+                    <i class="fa-solid fa-house"></i> <a href="index.html" id="home-btn">Home</a>
+                </li>
+                <li class="hover:text-main5">
+                    <i class="fa-regular fa-address-card mr-2"></i><a href="about.html " id="about-btn">About</a>
+                </li>
+                <li class="hover:text-main5">
+                    <i class="fa-solid fa-book"></i>
+                    <a href="projects.html" id="projects-btn">Projects</a>
+                </li>
+                <li class="hover:text-main5">
+                    <i class="fa-solid fa-address-card"></i>
+                    <a href="contact.html" id="contact-btn">Contact</a>
+                </li>
+                <li class="relative hover:text-main5">
+                    <i class="fa-solid fa-globe mr-2"></i>
+                    <select
+                            name="languages"
+                            id="languages"
+                            class="bg-main4 text-white border border-main5 rounded-md px-6 py-1 appearance-none focus:outline-none focus:ring-2 focus:ring-main5 focus:border-transparent"
+                            onchange="choose_language(this.value)"
+                    >
+                        <option class="bg-main4 text-black" value="" selected disabled id="lang-option">Language</option>
+                        <option class="bg-main4 text-black" value="english" id="english-option">English</option>
+                        <option class="bg-main4 text-black" value="norwegian" id="norwegian-option">Norwegian</option>
+                    </select>
+                    <i class="fa-solid fa-caret-down absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none"></i>
+                </li>
             </ul>
         </nav>
     </div>
 
+    <div class="flex-grow flex justify-center">
+        <!--<div class="flex-grow md:mx-32 lg:mx-96 ">-->
+    <div  id="home" class="  p-2 m-2 sm:max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl">
+ <!--   <div  id="home" class="  p-2 m-2">-->
+        <div class="intro max-h-[73vh] overflow-x-auto rounded relative pr-4">
 
-    <div class="flex-grow" id="home">
-        <div class="intro bg-main5  m-4 rounded relative">
-            <div class="md:rounded-r-full bg-main6 md:w-[50vw] lg:w-[40vw] xl:w-[35vw] ">
-                <div class="text-white text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl  p-4">
-                    <p class="inline">
-                        Hi, I'm Jonar, a
-                    </p>
-                    <p class="inline typer text-main3 underline" id="animated-text-spot"></p>
+            <div class="flex flex-col md:flex-row">
+
+                <!--ANIMATED TEXT-->
+                <div class="bubble bubble-bottom-left flex-grow w-full md:w-auto md:flex-shrink-0 md:mr-4 my-auto md:my-0  shadow-lg">
+                    <div class="flex items-center justify-center text-center h-full">
+                        <div class="text-base md:text-lg xl:text-xl 2xl:text-3xl p-4 min-w-[22vw]  ">
+                            <p id="hello-text">
+                                Hi, I'm Jonar,
+                            </p>
+                            <p class="inline" id="hello-text2">a</p>
+                            <p class="inline typer text-main2 underline" id="animated-text-spot"></p>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
 
-            <div class="bg-main7 w-fit p-4">
-                    <h4 class="text-2xl text-center md:text-start">What do i do?</h4>
-                    <p class="md:w-96">
+                <div class="bg-main7 flex-grow w-full md:w-fit  p-4 mt-12 md:mt-0 shadow-lg rounded">
+                    <h4 class="text-2xl text-center md:text-start" id="test">What do I do?</h4>
+                    <p class="md:w-96 text-base md:text-lg xl:text-xl text-center md:text-start">
                         With a wide variety of <a href="about.html" class="text-blue-400">technical skills</a> I have gathered in different technologies,
-                        I can provide a tailor made application and customer experience to fit your needs.
+                        I can provide a tailor-made application and customer experience to fit your needs.
                     </p>
-                <div>
-
                 </div>
             </div>
 
 
-            <div class=" p-4 bg-main8 m-4" >
-                <h4 class="text-2xl font-bold text-center">
+
+
+            <div class="mt-12" >
+                <h4 class="text-2xl font-bold text-center mb-4">
                     My services
                 </h4>
-                <ul class="grid w-full grid-cols-1 md:grid-cols-3 gap-4">
+                <ul class="grid w-full grid-cols-1 lg:grid-cols-3 gap-4">
 
-                    <li class="md:border-r-[1px] p-2 md:bg-transparent">
-                        <div class="border-b-[1px] md:border-none pb-4">
+                    <li class="p-2  bg-main8 rounded p-4 shadow-lg">
+                        <div class=" pb-4 ">
+                            <div class="text-center mb-4">
+                                <i class="fa-solid fa-mobile-screen mr-2 text-4xl"></i>
+                            </div>
                             <h4 class="text-xl font-bold text-center">
-                                <i class="fa-solid fa-mobile-screen mr-2"></i>Fullstack web and mobile application
+                                Fullstack web and mobile application
                             </h4>
                             <p> I offer web and mobile app soslutions like, but not limited to </p>
                             <ul >
@@ -79,10 +118,13 @@
 
                     </li>
 
-                    <li class=" p-2 md:bg-transparent">
-                        <div class="border-b-[1px] md:border-none pb-4">
+                    <li class=" p-2 bg-main8 rounded p-4 shadow-lg">
+                        <div class=" pb-4">
+                            <div class="text-center mb-4">
+                                <i class="fa-solid fa-cloud mr-2 text-4xl"></i>
+                            </div>
                             <h4 class="text-xl text-center font-bold">
-                                <i class="fa-solid fa-cloud mr-2"></i>Cloud architect
+                                Cloud architect
                             </h4>
                             <p>
                                 I have experience in setting up and hosting complex, secure, and high-performance applications,
@@ -93,9 +135,12 @@
                         </div>
                     </li>
 
-                    <li class="md:border-l-[1px] p-2">
+                    <li class="bg-main8 rounded p-4 shadow-lg">
+                        <div class="text-center mb-4">
+                            <i class="fa-solid fa-hammer mr-2 text-4xl"></i>
+                        </div>
                         <h4 class="text-xl text-center font-bold">
-                            <i class="fa-solid fa-hammer mr-2"></i>System maintenance and consulation
+                            System maintenance and consulation
                         </h4>
                         <p class="pl-4">
                             I offer maintenance services for both new and existing systems- My expertise includes:
@@ -132,6 +177,9 @@
             </div>
 
         </div>
+    </div>
+
+
     </div>
     <div class=" relative w-full p-4 bg-main4 text-center">
         &copy; 2024 Jonar. All rights reserved.
