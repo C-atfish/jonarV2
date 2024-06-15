@@ -38,3 +38,26 @@
     left: 32px;
     bottom: -24px;
 }
+
+
+#mouseCircle{
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+        background-color: #512481;
+    }
+    0%{
+
+        background-color: #ec2cec;
+    }
+
+
+    100%{
+        transform: rotate(360deg);
+        background-color: #512481;
+
+    }
+}
