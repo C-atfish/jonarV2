@@ -14,11 +14,17 @@
     <script src="tailwind.config.js"></script>
     
 </head>
-<body class="bg-main1 text-white overflow-x-hidden">
+<body class="bg-main1 text-white overflow-x-hidden z-10 overflow-hidden">
 <div class="flex flex-col h-[100vh]">
 
+    <div id="mouseCircle" class=" w-32 h-32 rounded absolute z-0">
+        <div class="innerCircle" >
+            <img src="images/me_face.png" alt="Jonars spinning face">
+        </div>
+    </div>
+
     <!-- HEADER -->
-    <div class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center">
+    <div class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center z-10">
         <nav class="flex ">
             <ul class="flex space-x-4 md:space-x-10 lg:space-x-12 text-center">
                 <li class="hover:text-main5">
@@ -55,7 +61,7 @@
     </div>
 
     <!-- MAIN CONTENT -->
-<div class="flex-auto flex justify-center">
+<div class="flex-auto flex justify-center z-10">
     <div class="p-2 m-2 sm:max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl">
         <!-- NAME, TITLE AND LOCATION HEADER -->
         <div class="text-center">

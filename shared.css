@@ -36,40 +36,62 @@ body, html {
 }
 
 
-/*
+#mouseCircle{
+/*    animation: spin 5s linear infinite;*/
 
-.content {
-    flex: 1;
-    width: 80%;
-
-    margin: 20px auto;
-}
-
-.no-space {
-    padding: 0;
-    margin: 0;
 
 }
-.footer {
+
+.innerCircle {
+    animation: scaleUpDown 1s linear infinite;
+
     width: 100%;
-    padding: 10px;
-    background-color: var(--secondary-accent-color2);
-    text-align: center;
-    color: var(--main-accent-color);
-    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer .social-media a {
-    color: var(--main-accent-color);
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
+@keyframes spin {
+    0%{
+
+
+        transform: rotate(0deg);
+    }
+    50%{
+
+        transform: rotate(180deg);
+
+    }
+
+
+    100%{
+
+        transform: rotate(360deg);
+
+
+
+    }
 }
 
-.footer .social-media a:hover {
-    color: var(--secondary-accent-color2);
-}
+@keyframes scaleUpDown {
+    0%{
+        transform: scale(0.1);
+        /*background-color: #512481;*/
+        opacity: 1;
+    }
+    50%{
 
-.footer .social-media {
-    margin-top: 10px;
-}*/
+        /*background-color: #ec2cec;*/
+        opacity: 1;
+
+
+    }
+    100%{
+        transform: scale(0.5);
+        /*background-color: #512481;*/
+        opacity: 0;
+
+    }
+
+}

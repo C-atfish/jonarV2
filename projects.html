@@ -11,11 +11,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
     <script src="content.js"></script>
+    <script src="shared.js"></script>
 </head>
-<body class="bg-main1 text-white">
-<div class="flex flex-col h-[100vh]">
+<body class="bg-main1 text-white overflow-hidden">
+
+<div id="mouseCircle" class=" w-32 h-32 rounded absolute z-0">
+    <div class="innerCircle" >
+        <img src="images/linux_face.png" alt="Linuxes spinning face">
+    </div>
+</div>
+
+<div class="flex flex-col h-[100vh] ">
     <!-- HEADER -->
-    <div class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center">
+    <div class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center z-10">
         <nav class="flex ">
             <ul class="flex space-x-4 md:space-x-10 lg:space-x-12 text-center">
                 <li class="hover:text-main5">
@@ -52,7 +60,7 @@
     </div>
 
     <!--MAIN CONTENT-->
-<div class="flex-grow m-4">
+<div class="flex-grow m-4 z-10">
 <h4 class="text-center text-3xl mb-4">Personal projects</h4>
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
         <!--DUOBINGO-->
