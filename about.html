@@ -15,13 +15,14 @@
     
 </head>
 <body class="bg-main1 text-white overflow-x-hidden z-10 overflow-hidden">
+<div id="mouseCircle" class=" w-32 h-32 rounded absolute z-0">
+    <div class="innerCircle" >
+        <img src="images/me_face.png" alt="Jonars spinning face">
+    </div>
+</div>
 <div class="flex flex-col h-[100vh]">
 
-    <div id="mouseCircle" class=" w-32 h-32 rounded absolute z-0">
-        <div class="innerCircle" >
-            <img src="images/me_face.png" alt="Jonars spinning face">
-        </div>
-    </div>
+
 
     <!-- HEADER -->
     <div class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center z-10">
@@ -61,7 +62,7 @@
     </div>
 
     <!-- MAIN CONTENT -->
-<div class="flex-auto flex justify-center z-10">
+<div class="flex-auto flex justify-center overflow-x-auto">
     <div class="p-2 m-2 sm:max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl">
         <!-- NAME, TITLE AND LOCATION HEADER -->
         <div class="text-center">
@@ -74,46 +75,47 @@
         </div>
 
         <!-- MAIN INFO -->
-        <div class=" bg-main6 p-2 lg:p-3">
-            <div class="grid grid-cols-1 lg:grid-cols-2   text-white bg-main5 max-h-[68vh] overflow-x-auto rounded scrolly">
+        <div class=" bg-main5 lg:bg-transparent rounded p-2 lg:p-3 z-[0]">
+            <div class="grid grid-cols-1 lg:grid-cols-2   text-white  overflow-x-auto rounded scrolly">
                 <!--PROFILE PICTURE-->
-                <div class="lg:pr-6 mt-4 lg:row-span-2">
-                    <div class="relative flex justify-center items-center">
+                <div class="relative flex justify-center items-center lg:pr-6 mt-4 lg:row-span-2">
+                    <!-- Rotated Background -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-96 bg-main2 rotate-3 z-0 shadow-lg"></div>
+
+                    <div class="relative flex justify-center items-center z-10">
                         <!-- DOWNLOAD CV BUTTON -->
-                        <button class="bg-main5 absolute top-6 left-1/2 transform -translate-x-24 lg:-translate-x-32 rounded-full flex space-x-3 p-2 hover:bg-main4 hover:text-main3">
+                        <a class="bg-main5 absolute top-6 left-1/2 transform -translate-x-24 lg:-translate-x-32 rounded-full flex space-x-3 p-2 hover:bg-main4 hover:text-main3" href="http://localhost:1001/download-cv">
                             <i class="fa-solid fa-download mr-2"></i>
                             CV
-                        </button>
-                        <img class="w-52 lg:w-72 rounded" src="/images/me.png" alt="Image of Jonar">
+                        </a>
+
+                        <!-- Image -->
+                        <img class=" w-72  h-96 rounded shadow-lg  aspect-auto" src="/images/me.png" alt="Image of Jonar">
                     </div>
                 </div>
 
-
-
                 <!--OVERVIEW-->
-                <div class="text-center  lg:mb-4 lg:p-2 mt-4 rounded mr-2 ml-2 lg:ml-0 lg:mr-4 mx-auto ">
+                <div class="text-center  lg:mb-4  mt-4 rounded  ml-2 lg:ml-0 mx-auto z-[10] lg:bg-main7 lg:shadow-lg lg:pt-2">
                     <h4 class="text-white text-xl font-bold "><i class="fa-solid fa-magnifying-glass mr-1"></i>Overview</h4>
-                    <div class="bg-main6 rounded lg:bg-main7 shadow-lg p-2">
-                        <p class="text-white text-start text-sm md:text-base p-2 bg-main7">From my bachelor in programming i have found my passion for technology, and
-                            gathered a wide variety of building blocks in different technologies and languages.
-                            As a person, i am structured, efficient and loyal. I am always happy and inspired, no
-                            matter the challenge. I have a burning passion for creativity. Which means i always
-                            have several ongoing personal projects. I have also gotten some experience using Agile
-                            methodologies, where we have used sprints to break down complex tasks.</p>
+                    <div class="rounded bg-main7 shadow-lg lg:bg-transparent lg:shadow-none p-2 lg:mt2">
+                        <p class="text-white text-start text-sm md:text-base p-2 ">With a bachelor's degree in programming, I have gained a passion for innovation,
+                            along with a diverse skill set in various technologies. Structured, efficient, and loyal, maintaining a positive and inspired attitude regardless of
+                            the challenge is a constant trait. A strong passion for creativity drives involvement in multiple personal projects.
+                            Experience includes working both independently and in teams using agile methodologies.</p>
                     </div>
                 </div>
 
                 <!-- EMPLOYMENT HISTORY -->
-                <div class="lg:row-span-2  mr-4 ml-2 lg:mr-0 lg:ml-0 mt-4 mb-4 lg:mt-0 lg:mb-0 ">
-                    <h4 class="text-center font-bold text-lg text-white"><i class="fa-solid fa-person-walking-luggage mr-1"></i>Employment history</h4>
+                <div class="lg:row-span-2  mr-4 ml-2 lg:mr-0 lg:ml-0 mt-4 mb-4 lg:mt-0 lg:mb-0 z-[10] lg:bg-main8 lg:rounded lg:shadow-lg lg:pt-2">
+                    <h4 class="text-center font-bold text-lg text-white"><i class="fa-solid fa-person-walking-luggage mr-1 "></i>Employment history</h4>
 
-                    <div class=" rounded bg-main6 lg:bg-main8 shadow-lg">
+                    <div class=" rounded bg-main8 lg:bg-transparent shadow-lg lg:shadow-none lg:mt-2">
                         <div class="overflow-x-auto max-h-[27vh]  mx-3">
                             <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-2 p-2">
                                 <!-- EXPERIENCE CARD -->
 
                                 <!--Card grid for mobile-->
-                                <li class="md:hidden bg-main7 p-4 rounded-lg shadow-md">
+                                <li class="md:hidden p-4 rounded-lg shadow-md">
                                     <div class="text-center mb-4">
                                         <h4 class="font-bold text-lg mb-1">Backend Developer</h4>
                                         <h5 class="text-sm">Millient Software</h5>
@@ -131,7 +133,7 @@
                                     </div>
                                 </li>
 
-                                <li class="md:hidden bg-main7 p-4 rounded-lg shadow-md">
+                                <li class="md:hidden p-4 rounded-lg shadow-md">
                                     <div class="text-center mb-4">
                                         <h4 class="font-bold text-lg mb-1">Backend Developer</h4>
                                         <h5 class="text-sm">Millient Software</h5>
@@ -196,7 +198,7 @@
                 </div>
 
                 <!--EDUCATION-->
-                <div class="lg:mt-4 rounded  mr-2  ml-2 lg:bg-main8 shadow-lg">
+                <div class="lg:mt-4 rounded  mr-2 md:mr-16  ml-2 lg:bg-main8 shadow-lg z-[10]">
                     <h4 class="text-center text-xl font-bold text-white p-2"><i class="fa-solid fa-graduation-cap "></i>Education</h4>
                     <ul class="  sm:text-xs md:text-sm lg:text-base bg-main8 rounded lg:bg-transparent p-2">
                         <li class="border-b-[1px] border-gray-500">
@@ -210,8 +212,9 @@
                     </ul>
                 </div>
 
-                <div class="text-center mt-4 mb-4 lg:col-span-2  mx-auto">
-                    <div class="w-[85vw] lg:w-[50vw] overflow-x-hidden relative bg-main3 rounded">
+                <!--TECHONOLOGIES-->
+                <div class="text-center mt-4 lg:col-span-2  mx-auto">
+                    <div class="w-[85vw] md:w-[64vw] overflow-x-hidden relative bg-main3 rounded">
                         <div id="imagesWrapper" class="carousel-inner">
                             <!-- Dynamically created images filled in here -->
                         </div>
@@ -231,7 +234,7 @@
 </div>
 
     <!--FOOTER-->
-    <div class=" relative w-full p-4 bg-main4 text-center">
+    <div class=" relative w-full p-2 bg-main4 text-center">
         &copy; 2024 Jonar. All rights reserved.
         <div class="social-media">
             <a href="https://github.com/yourusername" target="_blank">GitHub</a> |

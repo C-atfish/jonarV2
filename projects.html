@@ -1,102 +1,280 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Projects</title>
-    <link rel="stylesheet" href="shared.css">
-    <script src="https://kit.fontawesome.com/0716b6afca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="shared.css" />
+    <script
+      src="https://kit.fontawesome.com/0716b6afca.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
     <script src="content.js"></script>
     <script src="shared.js"></script>
-</head>
-<body class="bg-main1 text-white overflow-hidden">
-
-<div id="mouseCircle" class=" w-32 h-32 rounded absolute z-0">
-    <div class="innerCircle" >
-        <img src="images/linux_face.png" alt="Linuxes spinning face">
+  </head>
+  <body class="bg-main1 text-white overflow-hidden">
+    <div id="mouseCircle" class="w-32 h-32 rounded absolute z-0">
+      <div class="innerCircle">
+        <img src="images/linux_face.png" alt="Linuxes spinning face" />
+      </div>
     </div>
-</div>
 
-<div class="flex flex-col h-[100vh] ">
-    <!-- HEADER -->
-    <div class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center z-10">
-        <nav class="flex ">
-            <ul class="flex space-x-4 md:space-x-10 lg:space-x-12 text-center">
-                <li class="hover:text-main5">
-                    <i class="fa-solid fa-house"></i> <a href="index.html" id="home-btn">Home</a>
-                </li>
-                <li class="hover:text-main5">
-                    <i class="fa-regular fa-address-card mr-2"></i><a href="about.html " id="about-btn">About</a>
-                </li>
-                <li class="hover:text-main5">
-                    <i class="fa-solid fa-book"></i>
-                    <a href="projects.html" id="projects-btn">Projects</a>
-                </li>
-                <li class="hover:text-main5">
-                    <i class="fa-solid fa-address-card"></i>
-                    <a href="contact.html" id="contact-btn">Contact</a>
-                </li>
-                <li class="relative hover:text-main5">
-                    <i class="fa-solid fa-globe mr-2"></i>
-                    <select
-                            name="languages"
-                            id="languages"
-                            class="bg-main4 text-white border border-main5 rounded-md px-6 py-1 appearance-none focus:outline-none focus:ring-2 focus:ring-main5 focus:border-transparent"
-                            onchange="choose_language(this.value)"
-                    >
-                        <option class="bg-main4 text-black" value="" selected disabled id="lang-option">Language</option>
-                        <option class="bg-main4 text-black" value="english" id="english-option">English</option>
-                        <option class="bg-main4 text-black" value="norwegian" id="norwegian-option">Norwegian</option>
-                    </select>
-                    <i class="fa-solid fa-caret-down absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none"></i>
-                </li>
-
-            </ul>
+    <div class="flex flex-col h-[100vh]">
+      <!-- HEADER -->
+      <div
+        class="
+          w-full
+          p-4
+          bg-main4
+          text-white text-xs
+          sm:text-sm
+          md:text-lg
+          lg:text-xl
+          flex
+          justify-center
+          z-10
+        "
+      >
+        <nav class="flex">
+          <ul class="flex space-x-4 md:space-x-10 lg:space-x-12 text-center">
+            <li class="hover:text-main5">
+              <i class="fa-solid fa-house"></i>
+              <a href="index.html" id="home-btn">Home</a>
+            </li>
+            <li class="hover:text-main5">
+              <i class="fa-regular fa-address-card mr-2"></i
+              ><a href="about.html " id="about-btn">About</a>
+            </li>
+            <li class="hover:text-main5">
+              <i class="fa-solid fa-book"></i>
+              <a href="projects.html" id="projects-btn">Projects</a>
+            </li>
+            <li class="hover:text-main5">
+              <i class="fa-solid fa-address-card"></i>
+              <a href="contact.html" id="contact-btn">Contact</a>
+            </li>
+            <li class="relative hover:text-main5">
+              <i class="fa-solid fa-globe mr-2"></i>
+              <select
+                name="languages"
+                id="languages"
+                class="
+                  bg-main4
+                  text-white
+                  border border-main5
+                  rounded-md
+                  px-6
+                  py-1
+                  appearance-none
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-main5
+                  focus:border-transparent
+                "
+                onchange="choose_language(this.value)"
+              >
+                <option
+                  class="bg-main4 text-black"
+                  value=""
+                  selected
+                  disabled
+                  id="lang-option"
+                >
+                  Language
+                </option>
+                <option
+                  class="bg-main4 text-black"
+                  value="english"
+                  id="english-option"
+                >
+                  English
+                </option>
+                <option
+                  class="bg-main4 text-black"
+                  value="norwegian"
+                  id="norwegian-option"
+                >
+                  Norwegian
+                </option>
+              </select>
+              <i
+                class="
+                  fa-solid fa-caret-down
+                  absolute
+                  right-2
+                  top-1/2
+                  transform
+                  -translate-y-1/2
+                  pointer-events-none
+                "
+              ></i>
+            </li>
+          </ul>
         </nav>
-    </div>
+      </div>
 
-    <!--MAIN CONTENT-->
-<div class="flex-grow m-4 z-10">
-<h4 class="text-center text-3xl mb-4">Personal projects</h4>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-        <!--DUOBINGO-->
-        <li class="bg-main5 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
+      <!--MAIN CONTENT-->
+      <div class="flex-grow m-4 z-10 overflow-x-auto">
+        <h4 class="text-center text-3xl mb-4">Personal projects</h4>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+          <!--DUOBINGO-->
+          <li
+            class="
+              bg-main5
+              p-6
+              rounded-lg
+              shadow-lg
+              transform
+              transition-transform
+              hover:scale-[102%]
+            "
+          >
             <h4 class="text-2xl font-bold mt-2 mb-4 text-center">Duobingo</h4>
             <div class="flex flex-col md:flex-row items-center">
-                <img class="w-full md:w-48 h-auto rounded-lg" src="images/duobingo1.png" alt="Duobingo showcase image">
-                <p class="p-4 text-lg md:ml-4">A teambuilding game perfect to add some fun to your workplace or friend group. Add quirks about ablblablabla</p>
+              <img
+                class="w-full md:w-48 h-auto rounded-lg"
+                src="images/duobingo1.png"
+                alt="Duobingo showcase image"
+              />
+              <p class="p-4 text-lg md:ml-4">
+                A teambuilding game perfect to add some fun to your workplace or
+                friend group. Add quirks about ablblablabla
+              </p>
             </div>
-            <a href="https://duobingo.no" class="text-blue-400 underline mt-4 block text-center" target="_blank" rel="noopener noreferrer">Try it</a>
-        </li>
-            <!--Travster-->
-        <li class="bg-main5 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-            <h4 class="text-2xl font-bold mt-2 mb-4 text-center">Travster</h4>
+            <a
+              href="https://duobingo.no"
+              class="text-blue-400 underline mt-4 block text-center"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Try it</a
+            >
+          </li>
+          <!--Travster-->
+          <li
+            class="
+              bg-main5
+              p-6
+              rounded-lg
+              shadow-lg
+              transform
+              transition-transform
+              hover:scale-[102%]
+            "
+          >
+            <h4 class="text-2xl font-bold mt-2 mb-4 text-center">Siege</h4>
             <div class="flex flex-col md:flex-row items-center">
-                <img class="w-full md:w-48 h-auto rounded-lg" src="images/duobingo1.png" alt="Duobingo showcase image">
-                <p class="p-4 text-lg md:ml-4">An idle online strategy game where you can fight other players, found new villages and take over the world!</p>
+              <img
+                class="w-full md:w-48 h-auto rounded-lg"
+                src="images/duobingo1.png"
+                alt="Siege showcase image"
+              />
+              <p class="p-4 text-lg md:ml-4">
+                An idle online strategy game where you can fight other players,
+                found new villages and take over the world!
+              </p>
             </div>
-            <a href="https://duobingo.no" class="text-blue-400 underline mt-4 block text-center" target="_blank" rel="noopener noreferrer">Try it</a>
-        </li>
-    </ul>
+            <a
+              href="http://siege.no"
+              class="text-blue-400 underline mt-4 block text-center"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Try it</a
+            >
+          </li>
+        </ul>
 
-    <div class="text-center">
-        Other content i might place under my project list
-    </div>
-</div>
+        <div class="w-fit mx-auto">
+          <div
+            class="
+              text-center
+              grid grid-cols-1
+              place-items-center
+              bg-gray-500
+              p-4
+              rounded
+            "
+          >
+            <h4 class="font-semibold text-lg mb-2">Cat collection</h4>
+            <div
+              class="
+                flex
+                space-x-4
+                place-items-center
+                lg:max-w-[45vw]
+                overflow-x-auto
+              "
+            >
+              <img
+                src="images/cats_1.jpg"
+                alt="My lovely cats"
+                class="h-64 justify-center"
+              />
 
-    <!--FOOTER-->
-    <div class=" relative w-full p-4 bg-main4 text-center">
+              <img
+                src="images/cats_1.jpg"
+                alt="My lovely cats"
+                class="h-64 justify-center"
+              />
+              <img
+                src="images/cats_1.jpg"
+                alt="My lovely cats"
+                class="h-64 justify-center"
+              />
+              <img
+                src="images/cats_1.jpg"
+                alt="My lovely cats"
+                class="h-64 justify-center"
+              />
+              <img
+                src="images/cats_1.jpg"
+                alt="My lovely cats"
+                class="h-64 justify-center"
+              />
+              <img
+                src="images/cats_1.jpg"
+                alt="My lovely cats"
+                class="h-64 justify-center"
+              />
+              <img
+                src="images/cats_1.jpg"
+                alt="My lovely cats"
+                class="h-64 justify-center"
+              />
+              <img
+                src="images/cats_1.jpg"
+                alt="My lovely cats"
+                class="h-64 justify-center"
+              />
+              <img
+                src="images/cats_1.jpg"
+                alt="My lovely cats"
+                class="h-64 justify-center"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--FOOTER-->
+      <div class="relative w-full p-4 bg-main4 text-center">
         &copy; 2024 Jonar. All rights reserved.
         <div class="social-media">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> |
-            <a href="https://twitter.com/yourusername" target="_blank">Instagram</a>
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+          <a href="https://linkedin.com/in/yourusername" target="_blank"
+            >LinkedIn</a
+          >
+          |
+          <a href="https://twitter.com/yourusername" target="_blank"
+            >Instagram</a
+          >
         </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
