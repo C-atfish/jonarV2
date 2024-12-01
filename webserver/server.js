@@ -1,18 +1,18 @@
-import express from 'express'
+import express from "express";
 
-const server = express()
-
+const server = express();
 
 server.get("/download-cv", (req, res) => {
-    res.download("JonarLarsgardCV.pdf", (err) => {
-        if(err){
-            console.log("Error downloading CV!");
-            res.status(500).send("Error downloading this file!");
-        }
-    })
+  res.download("JonarLarsgardCV.pdf", (err) => {
+    if (err) {
+      console.log("Error downloading CV!");
+      console.log(err);
 
-})
+      res.status(500).send("Error downloading this file!");
+    }
+  });
+});
 
 server.listen(1001, () => {
-    console.log("server started at port 1001");
-})
+  console.log("server started at port 1001");
+});
