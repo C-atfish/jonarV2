@@ -7,6 +7,20 @@ const header_content = {
     lang_option: "Languages",
     eng_option: "English",
     no_option: "Norwegian",
+  },
+  no: {
+    home_btn: "Hjem",
+    about_btn: "Om meg",
+    project_btn: "Prosjekter",
+    contact_btn: "Kontakt",
+    lang_option: "Språk",
+    eng_option: "Engelsk",
+    no_option: "Norsk",
+  },
+};
+
+const index_content = {
+  en: {
     hello_text: "Hi, I'm Jonar,",
     hello_text2: " a",
     homeDoText: "What do i do?",
@@ -44,13 +58,6 @@ const header_content = {
     homeViewProjectsBtn: "View peronal Projects",
   },
   no: {
-    home_btn: "Hjem",
-    about_btn: "Om meg",
-    project_btn: "Prosjekter",
-    contact_btn: "Kontakt",
-    lang_option: "Språk",
-    eng_option: "Engelsk",
-    no_option: "Norsk",
     hello_text: "Hei, mitt navn er Jonar!",
     hello_text2: " Jeg er en",
     homeDoText: "Hva kan jeg?",
@@ -89,6 +96,56 @@ const header_content = {
   },
 };
 
+const projects_content = {
+  en: {
+    projectsPageTitle: "Personal projects",
+    siegeDescription:
+      "An idle online strategy game where you can fight other players, found new villages and take over the world!",
+    duobingoDescription:
+      "A teambuilding game perfect to add some fun to your workplace or friend group. Add quirks about ablblablabla",
+    tryItBtn: "Try it",
+    catTitle: "Cat collection",
+  },
+  no: {
+    projectsPageTitle: "Personlige prosjekter",
+    siegeDescription:
+      "Et inaktivt online strategispill hvor du kan kampe mot andre spillere, finne nye gårder og ta over verden!",
+    duobingoDescription:
+      "Et teambyggingsspill som er perfekt til å legge til litt humor på arbeidsplassen din eller vennergruppen din. Legg til enkle og enkle ting om ablblablabla",
+    tryItBtn: "Prøv nå",
+    catTitle: "Kattesamling",
+  },
+};
+
+function change_projects_content() {
+  const chosen_lang = localStorage.getItem("language");
+  if (chosen_lang === "english") {
+    document.getElementById("projectsPageTitle").innerText =
+      projects_content.en.projectsPageTitle;
+    document.getElementById("siegeDescription").innerText =
+      projects_content.en.siegeDescription;
+    document.getElementById("duobingoDescription").innerText =
+      projects_content.en.duobingoDescription;
+
+    document.querySelectorAll(".tryItBtn").forEach((btn) => {
+      btn.innerText = projects_content.en.tryItBtn;
+    });
+    document.getElementById("catTitle").innerText =
+      projects_content.en.catTitle;
+  } else if (chosen_lang === "norwegian") {
+    document.getElementById("projectsPageTitle").innerText =
+      projects_content.no.projectsPageTitle;
+    document.getElementById("siegeDescription").innerText =
+      projects_content.no.siegeDescription;
+    document.getElementById("duobingoDescription").innerText =
+      projects_content.no.duobingoDescription;
+    document.querySelectorAll(".tryItBtn").forEach((btn) => {
+      btn.innerText = projects_content.no.tryItBtn;
+    });
+    document.getElementById("catTitle").innerText =
+      projects_content.no.catTitle;
+  }
+}
 function change_header_content() {
   const chosen_lang = localStorage.getItem("language");
   if (chosen_lang === "english") {
@@ -105,54 +162,6 @@ function change_header_content() {
       header_content.en.eng_option;
     document.getElementById("norwegian-option").innerText =
       header_content.en.no_option;
-    document.getElementById("homeDoText").innerText =
-      header_content.en.homeDoText;
-    document.getElementById("homeDoDescription1").innerText =
-      header_content.en.homeDoDescription1;
-    document.getElementById("homeDoDescription2").innerText =
-      header_content.en.homeDoDescription2;
-    document.getElementById("homeDoDescription3").innerText =
-      header_content.en.homeDoDescription3;
-    document.getElementById("homeServiceTitle").innerText =
-      header_content.en.homeServiceTitle;
-    document.getElementById("homeService1Title").innerText =
-      header_content.en.homeService1Title;
-    document.getElementById("homeService2Title").innerText =
-      header_content.en.homeService2Title;
-    document.getElementById("homeService3Title").innerText =
-      header_content.en.homeService3Title;
-    document.getElementById("homeService2Description").innerText =
-      header_content.en.homeService2Description;
-    document.getElementById("homeService3Description1").innerText =
-      header_content.en.homeService3Description1;
-    document.getElementById("homeService3Description2").innerText =
-      header_content.en.homeService3Description2;
-    document.getElementById("homeService3Description3").innerText =
-      header_content.en.homeService3Description3;
-    document.getElementById("homeService3Description4").innerText =
-      header_content.en.homeService3Description4;
-    document.getElementById("homeService3Description5").innerText =
-      header_content.en.homeService3Description5;
-    document.getElementById("homeService3Description6").innerText =
-      header_content.en.homeService3Description6;
-    document.getElementById("homeService3Description7").innerText =
-      header_content.en.homeService3Description7;
-    document.getElementById("homeService1Description1").innerText =
-      header_content.en.homeService1Description1;
-    document.getElementById("homeService1Description2").innerText =
-      header_content.en.homeService1Description2;
-    document.getElementById("homeService1Description3").innerText =
-      header_content.en.homeService1Description3;
-    document.getElementById("homeService1Description4").innerText =
-      header_content.en.homeService1Description4;
-    document.getElementById("homeService1Description5").innerText =
-      header_content.en.homeService1Description5;
-    document.getElementById("homeService1Description6").innerText =
-      header_content.en.homeService1Description6;
-    document.getElementById("homeService1Description7").innerText =
-      header_content.en.homeService1Description7;
-    document.getElementById("homeViewProjectsBtn").innerText =
-      header_content.en.homeViewProjectsBtn;
   } else if (chosen_lang === "norwegian") {
     document.getElementById("home-btn").innerText = header_content.no.home_btn;
     document.getElementById("about-btn").innerText =
@@ -167,54 +176,6 @@ function change_header_content() {
       header_content.no.eng_option;
     document.getElementById("norwegian-option").innerText =
       header_content.no.no_option;
-    document.getElementById("homeDoText").innerText =
-      header_content.no.homeDoText;
-    document.getElementById("homeDoDescription1").innerText =
-      header_content.no.homeDoDescription1;
-    document.getElementById("homeDoDescription2").innerText =
-      header_content.no.homeDoDescription2;
-    document.getElementById("homeDoDescription3").innerText =
-      header_content.no.homeDoDescription3;
-    document.getElementById("homeServiceTitle").innerText =
-      header_content.no.homeServiceTitle;
-    document.getElementById("homeService1Title").innerText =
-      header_content.no.homeService1Title;
-    document.getElementById("homeService2Title").innerText =
-      header_content.no.homeService2Title;
-    document.getElementById("homeService3Title").innerText =
-      header_content.no.homeService3Title;
-    document.getElementById("homeService2Description").innerText =
-      header_content.no.homeService2Description;
-    document.getElementById("homeService3Description1").innerText =
-      header_content.no.homeService3Description1;
-    document.getElementById("homeService3Description2").innerText =
-      header_content.no.homeService3Description2;
-    document.getElementById("homeService3Description3").innerText =
-      header_content.no.homeService3Description3;
-    document.getElementById("homeService3Description4").innerText =
-      header_content.no.homeService3Description4;
-    document.getElementById("homeService3Description5").innerText =
-      header_content.no.homeService3Description5;
-    document.getElementById("homeService3Description6").innerText =
-      header_content.no.homeService3Description6;
-    document.getElementById("homeService3Description7").innerText =
-      header_content.no.homeService3Description7;
-    document.getElementById("homeService1Description1").innerText =
-      header_content.no.homeService1Description1;
-    document.getElementById("homeService1Description2").innerText =
-      header_content.no.homeService1Description2;
-    document.getElementById("homeService1Description3").innerText =
-      header_content.no.homeService1Description3;
-    document.getElementById("homeService1Description4").innerText =
-      header_content.no.homeService1Description4;
-    document.getElementById("homeService1Description5").innerText =
-      header_content.no.homeService1Description5;
-    document.getElementById("homeService1Description6").innerText =
-      header_content.no.homeService1Description6;
-    document.getElementById("homeService1Description7").innerText =
-      header_content.no.homeService1Description7;
-    document.getElementById("homeViewProjectsBtn").innerText =
-      header_content.no.homeViewProjectsBtn;
   }
 }
 
@@ -222,14 +183,110 @@ function change_index_content() {
   const chosen_lang = localStorage.getItem("language");
   if (chosen_lang === "english") {
     document.getElementById("hello-text").innerText =
-      header_content.en.hello_text;
+      index_content.en.hello_text;
     document.getElementById("hello-text2").innerText =
-      header_content.en.hello_text2;
+      index_content.en.hello_text2;
+    document.getElementById("homeDoText").innerText =
+      index_content.en.homeDoText;
+    document.getElementById("homeDoDescription1").innerText =
+      index_content.en.homeDoDescription1;
+    document.getElementById("homeDoDescription2").innerText =
+      index_content.en.homeDoDescription2;
+    document.getElementById("homeDoDescription3").innerText =
+      index_content.en.homeDoDescription3;
+    document.getElementById("homeServiceTitle").innerText =
+      index_content.en.homeServiceTitle;
+    document.getElementById("homeService1Title").innerText =
+      index_content.en.homeService1Title;
+    document.getElementById("homeService2Title").innerText =
+      index_content.en.homeService2Title;
+    document.getElementById("homeService3Title").innerText =
+      index_content.en.homeService3Title;
+    document.getElementById("homeService2Description").innerText =
+      index_content.en.homeService2Description;
+    document.getElementById("homeService3Description1").innerText =
+      index_content.en.homeService3Description1;
+    document.getElementById("homeService3Description2").innerText =
+      index_content.en.homeService3Description2;
+    document.getElementById("homeService3Description3").innerText =
+      index_content.en.homeService3Description3;
+    document.getElementById("homeService3Description4").innerText =
+      index_content.en.homeService3Description4;
+    document.getElementById("homeService3Description5").innerText =
+      index_content.en.homeService3Description5;
+    document.getElementById("homeService3Description6").innerText =
+      index_content.en.homeService3Description6;
+    document.getElementById("homeService3Description7").innerText =
+      index_content.en.homeService3Description7;
+    document.getElementById("homeService1Description1").innerText =
+      index_content.en.homeService1Description1;
+    document.getElementById("homeService1Description2").innerText =
+      index_content.en.homeService1Description2;
+    document.getElementById("homeService1Description3").innerText =
+      index_content.en.homeService1Description3;
+    document.getElementById("homeService1Description4").innerText =
+      index_content.en.homeService1Description4;
+    document.getElementById("homeService1Description5").innerText =
+      index_content.en.homeService1Description5;
+    document.getElementById("homeService1Description6").innerText =
+      index_content.en.homeService1Description6;
+    document.getElementById("homeService1Description7").innerText =
+      index_content.en.homeService1Description7;
+    document.getElementById("homeViewProjectsBtn").innerText =
+      index_content.en.homeViewProjectsBtn;
   } else if (chosen_lang === "norwegian") {
     document.getElementById("hello-text").innerText =
-      header_content.no.hello_text;
+      index_content.no.hello_text;
     document.getElementById("hello-text2").innerText =
-      header_content.no.hello_text2;
+      index_content.no.hello_text2;
+    document.getElementById("homeDoText").innerText =
+      index_content.no.homeDoText;
+    document.getElementById("homeDoDescription1").innerText =
+      index_content.no.homeDoDescription1;
+    document.getElementById("homeDoDescription2").innerText =
+      index_content.no.homeDoDescription2;
+    document.getElementById("homeDoDescription3").innerText =
+      index_content.no.homeDoDescription3;
+    document.getElementById("homeServiceTitle").innerText =
+      index_content.no.homeServiceTitle;
+    document.getElementById("homeService1Title").innerText =
+      index_content.no.homeService1Title;
+    document.getElementById("homeService2Title").innerText =
+      index_content.no.homeService2Title;
+    document.getElementById("homeService3Title").innerText =
+      index_content.no.homeService3Title;
+    document.getElementById("homeService2Description").innerText =
+      index_content.no.homeService2Description;
+    document.getElementById("homeService3Description1").innerText =
+      index_content.no.homeService3Description1;
+    document.getElementById("homeService3Description2").innerText =
+      index_content.no.homeService3Description2;
+    document.getElementById("homeService3Description3").innerText =
+      index_content.no.homeService3Description3;
+    document.getElementById("homeService3Description4").innerText =
+      index_content.no.homeService3Description4;
+    document.getElementById("homeService3Description5").innerText =
+      index_content.no.homeService3Description5;
+    document.getElementById("homeService3Description6").innerText =
+      index_content.no.homeService3Description6;
+    document.getElementById("homeService3Description7").innerText =
+      index_content.no.homeService3Description7;
+    document.getElementById("homeService1Description1").innerText =
+      index_content.no.homeService1Description1;
+    document.getElementById("homeService1Description2").innerText =
+      index_content.no.homeService1Description2;
+    document.getElementById("homeService1Description3").innerText =
+      index_content.no.homeService1Description3;
+    document.getElementById("homeService1Description4").innerText =
+      index_content.no.homeService1Description4;
+    document.getElementById("homeService1Description5").innerText =
+      index_content.no.homeService1Description5;
+    document.getElementById("homeService1Description6").innerText =
+      index_content.no.homeService1Description6;
+    document.getElementById("homeService1Description7").innerText =
+      index_content.no.homeService1Description7;
+    document.getElementById("homeViewProjectsBtn").innerText =
+      index_content.no.homeViewProjectsBtn;
   }
 }
 
@@ -255,5 +312,6 @@ function choose_language(language) {
   } else if (window.location.href.includes("about")) {
   } else if (window.location.href.includes("contact")) {
   } else if (window.location.href.includes("projects")) {
+    change_projects_content();
   }
 }
