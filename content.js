@@ -176,7 +176,7 @@ const about_content = {
     selfEmployedTitle: "Fullstack utvikler -",
     selfEmployedCompany: "Selvstendig -",
     selfEmployedDescription:
-      "Jeg har alltid personlige prosjekter pågående. Målet mitt er å lære så mye jeg kan, lage noe artig, og ha det gøy på veien. Mitt siste store prosjekt er ",
+      "Jeg har alltid personlige prosjekter på gang. Målet mitt er å lære mest mulig, skape noe morsomt og ha det gøy underveis. Mitt nyeste store prosjekt er ",
 
     apcoaDescription:
       "Jeg startet min stilling i Apcoa som utvikler av Facilityadmin, deres master data system som danner grunnlaget for alle Apcoas tjenester. Dette var en brå, men utrolig lærerrik start på utvikler-karrieren, uten seniorer jeg kunne lære fra. Jeg måtte raskt sette meg inn i kodebasen for å kunne fikse eksisterende feil i tillegg til å videreutvikle systemene. Apcoa er ledende i Europa på ANPR-teknologi, og min rolle består av alt fra å skrive rene SQL-spørringer, sette opp server miljøer, migrere store mengder data fra eksterne systemer til interne og videreutvikle systemet som står for bl.a priskalkulator og administrering av parkering til store tredjeparts kunder. Denne tjenesten er skrevet i Python med Django som rammeverk. Tjenestene mitt system jobber opp mot bruker andre teknologier, og jeg har grunnet dette satt meg inn i bl.a. node, vue, jenkins og NGINX. ",
