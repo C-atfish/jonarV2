@@ -10,7 +10,8 @@ on some links, have a hand/mouse/pointer that comes up and imitates the click so
 - Update the info in:
   - homepage: DONE
   - about:
-  - Projects:
+  - Projects: DONE
   - Contact: DONE
 - add more images of the cats
+- Make the links in footer link to actual pages
 - Setup hosting on the other server.

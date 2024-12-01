@@ -100,18 +100,18 @@ const projects_content = {
   en: {
     projectsPageTitle: "Personal projects",
     siegeDescription:
-      "An idle online strategy game where you can fight other players, found new villages and take over the world!",
+      "An idle online strategy game based on the roman times, where you can fight other players, found new villages and take over the world!",
     duobingoDescription:
-      "A teambuilding game perfect to add some fun to your workplace or friend group. Add quirks about ablblablabla",
+      "A teambuilding game perfect to add some fun to your workplace or friend group. Add custom quirks and play around in the team.",
     tryItBtn: "Try it",
     catTitle: "Cat collection",
   },
   no: {
     projectsPageTitle: "Personlige prosjekter",
     siegeDescription:
-      "Et inaktivt online strategispill hvor du kan kampe mot andre spillere, finne nye gårder og ta over verden!",
+      "Et browser multiplayer strategispill hvor du kan kjempe mot andre spillere, finne nye byer og ta over verden!",
     duobingoDescription:
-      "Et teambyggingsspill som er perfekt til å legge til litt humor på arbeidsplassen din eller vennergruppen din. Legg til enkle og enkle ting om ablblablabla",
+      "Et teambyggingsspill som er perfekt for å legge til litt humor på arbeidsplassen eller i vennergruppen din. Legg til morsomme custom bingo mål og spill rundt i teamet.",
     tryItBtn: "Prøv nå",
     catTitle: "Kattesamling",
   },
@@ -149,12 +149,12 @@ const about_content = {
     millientJobTitle: "Backend developer -",
     selfEmployedTitle: "Fullstack Developer -",
     apcoaDescription:
-      "I worked primarily with Python and Django, but also closely with the MySQL database and the server configuring NGINX and setting up deployment pipelines. The system i am resposible for is tha backbone of APCOA. This is where all price calculations, whitelist validations, contract etc comes in. It handles several hundreds of thousands of transactions a day. Here i got comfortable working efficiently and structured with short deadlines.",
+      "I started my position at Apcoa as a developer for Facilityadmin, their master data system that forms the foundation for all of Apcoa's services. This was a sudden but incredibly educational start to my developer career, without any seniors to learn from. I quickly had to familiarize myself with the codebase to fix existing issues and further develop the systems. Apcoa is a European leader in ANPR technology, and my role encompasses everything from writing clean SQL queries, setting up server environments, migrating large amounts of data from external systems to internal ones, and developing the system responsible for tasks such as price calculation and parking management for major third-party clients. This service is written in Python with Django as the framework. The services my system interacts with use other technologies, and as a result, I have gained experience with, among other things, Node.js, Vue, Jenkins, and NGINX.",
     millientDescription:
       "I developed a customer portal for Millients existing solution. Constructed an API with Java using Spring, and modeled the database with PostgreSQL.",
     selfEmployedCompany: "Self employed -",
     selfEmployedDescription:
-      "I always have some personal ongoing projects to stay on to keep learning and staying creative. My most recent project to showcase is ",
+      "I always have personal projects underway. My goal is to learn as much as I can, create something fun, and enjoy the process along the way. My latest major project is ",
     educationTitle: "Education",
     bachelorDescription:
       "- Bachelor in Programming at Kristiania University College.",
@@ -164,7 +164,8 @@ const about_content = {
     locationClass: "Oslo, Norge",
     locationClass2: "Lørenskog, Norge",
     overviewTitle: "Oversikt",
-    overviewDescription: "placeholder",
+    overviewDescription:
+      "Med en bachelor i programmering, har jeg funnet en lidenskap for innovasjon, og en rekke kunnskaper i forskjellige teknologier. Strukturert, effektiv og lojal, med en positiv og inspirert holdning som bevares uansett utfordring. En sterk lidenskap for kreativitet driver engasjement i flere personlige prosjekter. Erfaring inkluderer arbeid både selvstendig og i team ved bruk av smidige metodikker.",
     employmentTitle: "ArbeidsHistorikk",
     apcoaJobTitle: "Facilityadmin/Fullstack utvikler",
     apcoaCompanyName: "Apcoa Norge AS",
@@ -175,10 +176,10 @@ const about_content = {
     selfEmployedTitle: "Fullstack utvikler -",
     selfEmployedCompany: "Selvstendig -",
     selfEmployedDescription:
-      "Jeg har alltid noen personlige pågående prosjekter å holde på å holde på å lære og holde på å bli kreativ. Min siste prosjekt som viser seg er ",
+      "Jeg har alltid personlige prosjekter pågående. Målet mitt er å lære så mye jeg kan, lage noe artig, og ha det gøy på veien. Mitt siste store prosjekt er ",
 
     apcoaDescription:
-      "Jeg har arbeidet primært med Python og Django, men også nærmest med MySQL database og serveren konfigurering NGINX og oppsett av deployment pipelines. Systemet jeg er ansvarlig for er bakgrunnen til APCOA. Dette er hvor alle prisberegninger, whitelist-valideringer, kontrakt osv. kommer inn. Det håndterer flere hundre tusenvis av transaksjoner dag. Her har jeg komfortabelt arbeidet effektivt og strukturert med korte fristene.",
+      "Jeg startet min stilling i Apcoa som utvikler av Facilityadmin, deres master data system som danner grunnlaget for alle Apcoas tjenester. Dette var en brå, men utrolig lærerrik start på utvikler-karrieren, uten seniorer jeg kunne lære fra. Jeg måtte raskt sette meg inn i kodebasen for å kunne fikse eksisterende feil i tillegg til å videreutvikle systemene. Apcoa er ledende i Europa på ANPR-teknologi, og min rolle består av alt fra å skrive rene SQL-spørringer, sette opp server miljøer, migrere store mengder data fra eksterne systemer til interne og videreutvikle systemet som står for bl.a priskalkulator og administrering av parkering til store tredjeparts kunder. Denne tjenesten er skrevet i Python med Django som rammeverk. Tjenestene mitt system jobber opp mot bruker andre teknologier, og jeg har grunnet dette satt meg inn i bl.a. node, vue, jenkins og NGINX. ",
     millientDescription:
       "Jeg utviklede en kundeopplevelse for Milliente eksisterende løsning. Konstruerte en API med Java med Spring, og modellert databasen med PostgreSQL.",
     educationTitle: "Utdanning",
