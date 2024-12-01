@@ -68,9 +68,9 @@ const index_content = {
     homeServiceTitle: "Mine tjenester",
     homeService1Title: "Fullstack web og mobilapplikasjon",
     homeService2Title: "Cloud arkitekt",
-    homeService3Title: "System-vedlikehold og konsulent",
+    homeService3Title: "Konsulent",
     homeService2Description:
-      "Jeg har erfaring med å sette opp og hoste komplekse, sikre og høy-ytelse applikasjoner både onsite og i skyen. Mitt hoved fokus er ytelse, skalerbarhet og tilgjengelighet.",
+      "Jeg kan sette opp infrastruktur og hoste komplekse sikre og høy-ytelse applikasjoner både onsite og i skyen. Mitt hoved fokus er ytelse, skalerbarhet og tilgjengelighet.",
     homeService3Description1:
       "Vedlikeholdstjenester for nye og eksisterende systemer, inkluderer:",
     homeService3Description2: "System vedlikehold",
@@ -86,12 +86,12 @@ const index_content = {
     homeService1Description2: "E-business tjenester",
     homeService1Description3:
       "Utvikling av nettbutikker for enkel produktutdeling og kundeopplevelse.",
-    homeService1Description4: "Kundeopplevelsessystemer:",
+    homeService1Description4: "Kunde-Rating systemer:",
     homeService1Description5:
-      "Anmeldelser, vurderinger, bonus og tilbud-systemer for å forbedre kundeopplevelsen.",
-    homeService1Description6: "Restaurant bestilling og kø systemer",
+      "Anmeldelser, vurderinger, bonus og tilbud-systemer.",
+    homeService1Description6: "Restaurant bestilling og kø",
     homeService1Description7:
-      "Sofistikerte bestilling og kø systemer med databaseintegratjon.",
+      "Sofistikerte bestilling og kø systemer med databaseintegrasjon og langtids vedlikehold.",
     homeViewProjectsBtn: "Se personlige prosjekter",
   },
 };
@@ -122,15 +122,166 @@ const contact_content = {
     contactTiltle: "Contact me",
     contactDescription:
       "If you got a business proposal or want to work with me, reach out on email or phone!",
-    contactJobTitle: "Full-stack developer",
+    contactJobTitle: "Fullstack developer",
   },
   no: {
     contactTiltle: "Kontakt meg",
     contactDescription:
-      "Om du har en forretningsforslag eller vil jobbe med meg, ta kontakt på epost eller telefon!",
+      "Har du et forretningsforslag eller ønsker å samarbeide med meg? Ta gjerne kontakt på e-post eller telefon!",
     contactJobTitle: "Full-stack utvikler",
   },
 };
+
+const about_content = {
+  en: {
+    jobTitle: "Full-Stack Developer",
+    locationClass: "Oslo, Norway",
+    locationClass2: "Lørenskog, Norway",
+    overviewTitle: "Overview",
+    overviewDescription:
+      "With a bachelor's degree in programming, I have gained a passion for innovation, along with a diverse skill set in various technologies. Structured, efficient, and loyal, maintaining a positive and inspired attitude regardless of the challenge is a constant trait. A strong passion for creativity drives involvement in multiple personal projects. Experience includes working both independently and in teams using agile methodologies.",
+    employmentTitle: "Employment history",
+    apcoaJobTitle: "Facilityadmin/Fullstack developer",
+    apcoaCompanyName: "Apcoa Norway AS",
+    selfEmployedDate: "January 2023 - Today",
+    apcoaDate: "August 2023 - today",
+    millientDate: "January 2023 - June 2023",
+    millientJobTitle: "Backend developer -",
+    selfEmployedTitle: "Fullstack Developer -",
+    apcoaDescription:
+      "I worked primarily with Python and Django, but also closely with the MySQL database and the server configuring NGINX and setting up deployment pipelines. The system i am resposible for is tha backbone of APCOA. This is where all price calculations, whitelist validations, contract etc comes in. It handles several hundreds of thousands of transactions a day. Here i got comfortable working efficiently and structured with short deadlines.",
+    millientDescription:
+      "I developed a customer portal for Millients existing solution. Constructed an API with Java using Spring, and modeled the database with PostgreSQL.",
+    selfEmployedCompany: "Self employed -",
+    selfEmployedDescription:
+      "I always have some personal ongoing projects to stay on to keep learning and staying creative. My most recent project to showcase is ",
+    educationTitle: "Education",
+    bachelorDescription:
+      "- Bachelor in Programming at Kristiania University College.",
+  },
+  no: {
+    jobTitle: "Full-stack utvikler",
+    locationClass: "Oslo, Norge",
+    locationClass2: "Lørenskog, Norge",
+    overviewTitle: "Oversikt",
+    overviewDescription: "placeholder",
+    employmentTitle: "ArbeidsHistorikk",
+    apcoaJobTitle: "Facilityadmin/Fullstack utvikler",
+    apcoaCompanyName: "Apcoa Norge AS",
+    selfEmployedDate: "Januar 2023 - d.d",
+    apcoaDate: "August 2023 - d.d",
+    millientDate: "Januar 2023 - Juni 2023",
+    millientJobTitle: "Backend utvikler -",
+    selfEmployedTitle: "Fullstack utvikler -",
+    selfEmployedCompany: "Selvstendig -",
+    selfEmployedDescription:
+      "Jeg har alltid noen personlige pågående prosjekter å holde på å holde på å lære og holde på å bli kreativ. Min siste prosjekt som viser seg er ",
+
+    apcoaDescription:
+      "Jeg har arbeidet primært med Python og Django, men også nærmest med MySQL database og serveren konfigurering NGINX og oppsett av deployment pipelines. Systemet jeg er ansvarlig for er bakgrunnen til APCOA. Dette er hvor alle prisberegninger, whitelist-valideringer, kontrakt osv. kommer inn. Det håndterer flere hundre tusenvis av transaksjoner dag. Her har jeg komfortabelt arbeidet effektivt og strukturert med korte fristene.",
+    millientDescription:
+      "Jeg utviklede en kundeopplevelse for Milliente eksisterende løsning. Konstruerte en API med Java med Spring, og modellert databasen med PostgreSQL.",
+    educationTitle: "Utdanning",
+    bachelorDescription: "- Bachelor i Programmering ved HøyskolenKristiania.",
+  },
+};
+
+function change_about_content() {
+  const chosen_lang = localStorage.getItem("language");
+  if (chosen_lang === "english") {
+    document.getElementById("jobTitle").innerText = about_content.en.jobTitle;
+    document.querySelectorAll(".locationClass").forEach((h4) => {
+      h4.innerText = about_content.en.locationClass;
+    });
+    document.querySelectorAll(".locationClass2").forEach((h4) => {
+      h4.innerText = about_content.en.locationClass2;
+    });
+    document.getElementById("overviewTitle").innerText =
+      about_content.en.overviewTitle;
+    document.getElementById("overviewDescription").innerText =
+      about_content.en.overviewDescription;
+    document.getElementById("employmentTitle").innerText =
+      about_content.en.employmentTitle;
+    document.querySelectorAll(".apcoaJobTitle").forEach((h4) => {
+      h4.innerText = about_content.en.apcoaJobTitle;
+    });
+    document.querySelectorAll(".apcoaCompanyName").forEach((h4) => {
+      h4.innerText = about_content.en.apcoaCompanyName;
+    });
+    document.querySelectorAll(".selfEmployedDate").forEach((p) => {
+      p.innerText = about_content.en.selfEmployedDate;
+    });
+    document.getElementById("apcoaDate").innerText = about_content.en.apcoaDate;
+    document.querySelectorAll(".millientDate").forEach((p) => {
+      p.innerText = about_content.en.millientDate;
+    });
+    document.querySelectorAll(".millientJobTitle").forEach((h4) => {
+      h4.innerText = about_content.en.millientJobTitle;
+    });
+    document.querySelectorAll(".selfEmployedTitle").forEach((h4) => {
+      h4.innerText = about_content.en.selfEmployedTitle;
+    });
+    document.querySelectorAll(".apcoaDescription").forEach((p) => {
+      p.innerText = about_content.en.apcoaDescription;
+    });
+    document.querySelectorAll(".millientDescription").forEach((p) => {
+      p.innerText = about_content.en.millientDescription;
+    });
+    document.querySelectorAll(".selfEmployedDescription").forEach((p) => {
+      p.innerText = about_content.en.selfEmployedDescription;
+    });
+    document.getElementById("educationTitle").innerText =
+      about_content.en.educationTitle;
+    document.getElementById("bachelorDescription").innerText =
+      about_content.en.bachelorDescription;
+  } else if (chosen_lang === "norwegian") {
+    document.getElementById("jobTitle").innerText = about_content.no.jobTitle;
+    document.querySelectorAll(".locationClass").forEach((h4) => {
+      h4.innerText = about_content.no.locationClass;
+    });
+    document.querySelectorAll(".locationClass2").forEach((h4) => {
+      h4.innerText = about_content.no.locationClass2;
+    });
+    document.getElementById("overviewTitle").innerText =
+      about_content.no.overviewTitle;
+    document.getElementById("overviewDescription").innerText =
+      about_content.no.overviewDescription;
+    document.getElementById("employmentTitle").innerText =
+      about_content.no.employmentTitle;
+    document.querySelectorAll(".apcoaJobTitle").forEach((h4) => {
+      h4.innerText = about_content.no.apcoaJobTitle;
+    });
+    document.querySelectorAll(".apcoaCompanyName").forEach((h4) => {
+      h4.innerText = about_content.no.apcoaCompanyName;
+    });
+    document.querySelectorAll(".selfEmployedDate").forEach((p) => {
+      p.innerText = about_content.no.selfEmployedDate;
+    });
+    document.getElementById("apcoaDate").innerText = about_content.no.apcoaDate;
+    document.querySelectorAll(".millientDate").forEach((p) => {
+      p.innerText = about_content.no.millientDate;
+    });
+    document.querySelectorAll(".millientJobTitle").forEach((h4) => {
+      h4.innerText = about_content.no.millientJobTitle;
+    });
+    document.querySelectorAll(".selfEmployedTitle").forEach((h4) => {
+      h4.innerText = about_content.no.selfEmployedTitle;
+    });
+    document.querySelectorAll(".apcoaDescription").forEach((p) => {
+      p.innerText = about_content.no.apcoaDescription;
+    });
+    document.querySelectorAll(".millientDescription").forEach((p) => {
+      p.innerText = about_content.no.millientDescription;
+    });
+    document.querySelectorAll(".selfEmployedDescription").forEach((p) => {
+      p.innerText = about_content.no.selfEmployedDescription;
+    });
+    document.getElementById("educationTitle").innerText =
+      about_content.no.educationTitle;
+    document.getElementById("bachelorDescription").innerText =
+      about_content.no.bachelorDescription;
+  }
+}
 
 function change_contact_content() {
   const chosen_lang = localStorage.getItem("language");
@@ -343,6 +494,7 @@ function choose_language(language) {
   if (window.location.href.includes("index")) {
     change_index_content();
   } else if (window.location.href.includes("about")) {
+    change_about_content();
   } else if (window.location.href.includes("contact")) {
     change_contact_content();
   } else if (window.location.href.includes("projects")) {

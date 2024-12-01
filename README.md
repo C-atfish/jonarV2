@@ -7,11 +7,10 @@ on some links, have a hand/mouse/pointer that comes up and imitates the click so
 ## TODO
 
 - Remove white BG of pin
-- Translate all texts
-  - Homepag [X]
-  - About []
-  - Projects []
-  - Contact []
-- Update the info in the about
+- Update the info in:
+  - homepage: DONE
+  - about:
+  - Projects:
+  - Contact: DONE
 - add more images of the cats
 - Setup hosting on the other server.
