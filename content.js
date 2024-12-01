@@ -117,6 +117,39 @@ const projects_content = {
   },
 };
 
+const contact_content = {
+  en: {
+    contactTiltle: "Contact me",
+    contactDescription:
+      "If you got a business proposal or want to work with me, reach out on email or phone!",
+    contactJobTitle: "Full-stack developer",
+  },
+  no: {
+    contactTiltle: "Kontakt meg",
+    contactDescription:
+      "Om du har en forretningsforslag eller vil jobbe med meg, ta kontakt på epost eller telefon!",
+    contactJobTitle: "Full-stack utvikler",
+  },
+};
+
+function change_contact_content() {
+  const chosen_lang = localStorage.getItem("language");
+  if (chosen_lang === "english") {
+    document.getElementById("contactTiltle").innerText =
+      contact_content.en.contactTiltle;
+    document.getElementById("contactDescription").innerText =
+      contact_content.en.contactDescription;
+    document.getElementById("contactJobTitle").innerText =
+      contact_content.en.contactJobTitle;
+  } else if (chosen_lang === "norwegian") {
+    document.getElementById("contactTiltle").innerText =
+      contact_content.no.contactTiltle;
+    document.getElementById("contactDescription").innerText =
+      contact_content.no.contactDescription;
+    document.getElementById("contactJobTitle").innerText =
+      contact_content.no.contactJobTitle;
+  }
+}
 function change_projects_content() {
   const chosen_lang = localStorage.getItem("language");
   if (chosen_lang === "english") {
@@ -311,6 +344,7 @@ function choose_language(language) {
     change_index_content();
   } else if (window.location.href.includes("about")) {
   } else if (window.location.href.includes("contact")) {
+    change_contact_content();
   } else if (window.location.href.includes("projects")) {
     change_projects_content();
   }

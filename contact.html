@@ -29,18 +29,7 @@
     <div class="flex flex-col h-[100vh]">
       <!-- HEADER -->
       <div
-        class="
-          w-full
-          p-4
-          bg-main4
-          text-white text-xs
-          sm:text-sm
-          md:text-lg
-          lg:text-xl
-          flex
-          justify-center
-          z-10
-        "
+        class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center z-10"
       >
         <nav class="flex">
           <ul class="flex space-x-4 md:space-x-10 lg:space-x-12 text-center">
@@ -65,19 +54,7 @@
               <select
                 name="languages"
                 id="languages"
-                class="
-                  bg-main4
-                  text-white
-                  border border-main8
-                  rounded-md
-                  px-6
-                  py-1
-                  appearance-none
-                  focus:outline-none
-                  focus:ring-2
-                  focus:ring-main5
-                  focus:border-transparent
-                "
+                class="bg-main4 text-white border border-main8 rounded-md px-6 py-1 appearance-none focus:outline-none focus:ring-2 focus:ring-main5 focus:border-transparent"
                 onchange="choose_language(this.value)"
               >
                 <option
@@ -105,15 +82,7 @@
                 </option>
               </select>
               <i
-                class="
-                  fa-solid fa-caret-down
-                  absolute
-                  right-2
-                  top-1/2
-                  transform
-                  -translate-y-1/2
-                  pointer-events-none
-                "
+                class="fa-solid fa-caret-down absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none"
               ></i>
             </li>
           </ul>
@@ -121,8 +90,8 @@
       </div>
 
       <div class="z-10">
-        <h4 class="text-center text-3xl mt-4">Contact me</h4>
-        <p class="text-center mb-4">
+        <h4 class="text-center text-3xl mt-4" id="contactTiltle">Contact me</h4>
+        <p class="text-center mb-4" id="contactDescription">
           If you got a business proposal or want to work with me, reach out on
           email or phone!
         </p>
@@ -139,14 +108,7 @@
             >
               <div class="">
                 <img
-                  class="
-                    w-12
-                    h-12
-                    md:w-24 md:h-24
-                    rounded-full
-                    border-2 border-white
-                    shadow-lg
-                  "
+                  class="w-12 h-12 md:w-24 md:h-24 rounded-full border-2 border-white shadow-lg"
                   src="images/me.png"
                   alt="Jonar profile picture"
                 />
@@ -154,7 +116,7 @@
               <div class="flex flex-col h-full">
                 <div class="flex-grow">
                   <h4 class="text-xl md:text-2xl font-bold">Jonar Larsgard</h4>
-                  <h4>Full-stack developer</h4>
+                  <h4 id="contactJobTitle">Full-stack developer</h4>
                 </div>
 
                 <div class="flex space-x-2 md:space-x-6 text-sm md:text-lg">
@@ -175,15 +137,7 @@
           </div>
           <!--BACK OF THE BUSINESS CARD-->
           <div
-            class="
-              card-back
-              bg-gradient-to-r
-              from-main5
-              to-main7
-              relative
-              overflow-hidden
-              text-white
-            "
+            class="card-back bg-gradient-to-r from-main5 to-main7 relative overflow-hidden text-white"
           >
             <i
               class="fa-solid fa-arrow-left absolute top-4 right-4 text-lg"
