@@ -124,6 +124,7 @@
                 <div class="relative flex justify-center items-center z-10">
                   <!-- DOWNLOAD CV BUTTON -->
                   <a
+                    id="downloadLink"
                     class="bg-main5 absolute top-6 left-1/2 transform -translate-x-24 lg:-translate-x-32 rounded-full flex space-x-3 p-2 hover:bg-main4 hover:text-main3"
                     href="http://localhost:1001/download-cv"
                   >
@@ -303,7 +304,7 @@
                           <h4 class="locationClass">Oslo, Norway</h4>
                         </div>
                         <p class="text-gray-200 millientDate">
-                          January 2023 - June 2023
+                          January 2023 - June 2023 January 2023 - June 2023
                         </p>
                         <p class="text-start millientDescription">
                           I developed a customer portal for Millients existing
@@ -391,5 +392,23 @@
       </div>
     </div>
   </body>
+  <script>
+    // Get the link element by its ID
+    const link = document.getElementById("downloadLink");
+
+    link.addEventListener("click", function (event) {
+      const language = localStorage.getItem("language");
+
+      if (language) {
+        event.preventDefault();
+
+        const currentUrl = new URL(link.href);
+
+        currentUrl.searchParams.set("lang", language);
+
+        window.location.href = currentUrl.toString();
+      }
+    });
+  </script>
   <script src="about.js"></script>
 </html>

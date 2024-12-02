@@ -3,14 +3,27 @@ import express from "express";
 const server = express();
 
 server.get("/download-cv", (req, res) => {
-  res.download("JonarLarsgardCV.pdf", (err) => {
-    if (err) {
-      console.log("Error downloading CV!");
-      console.log(err);
+  const language = req.query.lang;
 
-      res.status(500).send("Error downloading this file!");
-    }
-  });
+  if (language === "norwegian") {
+    res.download("JONAR_LARSGARD_CV_NORWEGIAN.pdf", (err) => {
+      if (err) {
+        console.log("Error downloading CV!");
+        console.log(err);
+
+        res.status(500).send("Error downloading this file!");
+      }
+    });
+  } else {
+    res.download("JONAR_LARSGARD_CV_ENGLISH.pdf", (err) => {
+      if (err) {
+        console.log("Error downloading CV!");
+        console.log(err);
+
+        res.status(500).send("Error downloading this file!");
+      }
+    });
+  }
 });
 
 server.listen(1001, () => {
