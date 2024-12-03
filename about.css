@@ -1,46 +1,35 @@
-
-
 /*IMG in the carousel*/
 .logoImage {
-    width: 100px;
-    height: auto;
-    margin: 0 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100px;
+  height: auto;
+  margin: 0 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logoImage:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-.carousel-inner{
-
-    display: flex;
-    width: 200%;
-    animation: scroll 40s linear infinite;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.carousel-inner {
+  display: flex;
+  width: 200%;
+  animation: scroll 40s linear infinite;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 @keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-200%);
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
 }
 
-
-
-.img-bg{
-    transform: rotate(-3deg);
+.img-bg {
+  transform: rotate(-3deg);
 }
-
-
-
-
-

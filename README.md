@@ -6,5 +6,13 @@ on some links, have a hand/mouse/pointer that comes up and imitates the click so
 
 ## TODO
 
-- add more images of the cats
+- Make site look good on mobile
+  - Homepage - DONE
+  - About page - DONE
+  - Projects page - DONE
+  - Contact page - DONE
 - Setup hosting on the other server.
+  - Deploy frontend
+    - setup tailwind for production
+  - Deploy backend
+    - Dockerize the server

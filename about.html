@@ -13,8 +13,8 @@
       src="https://kit.fontawesome.com/0716b6afca.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="output.css" />
   </head>
   <body class="bg-main1 text-white overflow-x-hidden z-10 overflow-hidden">
     <div id="mouseCircle" class="w-32 h-32 rounded absolute z-0">
@@ -364,9 +364,12 @@
               <!--TECHONOLOGIES-->
               <div class="text-center mt-4 lg:col-span-2 mx-auto">
                 <div
-                  class="w-[85vw] md:w-[64vw] overflow-x-hidden relative bg-main4 rounded"
+                  class="w-[85vw] md:w-[64vw] overflow-hidden relative bg-main4 rounded"
                 >
-                  <div id="imagesWrapper" class="carousel-inner">
+                  <div
+                    id="imagesWrapper"
+                    class="carousel-inner flex items-center justify-center pt-2 pb-2"
+                  >
                     <!-- Dynamically created images filled in here -->
                   </div>
                 </div>
