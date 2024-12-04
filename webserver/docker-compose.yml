@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  jonarwebserver:
+    container_name: "jonarwebserver"
+    build: .
+    ports:
+      - "1001:1001"

@@ -104,7 +104,7 @@ const projects_content = {
     duobingoDescription:
       "A teambuilding game perfect to add some fun to your workplace or friend group. Add custom quirks and play around in the team.",
     tryItBtn: "Try it",
-    catTitle: "Cat collection",
+    catTitle: "Pet collection",
   },
   no: {
     projectsPageTitle: "Personlige prosjekter",
@@ -113,7 +113,7 @@ const projects_content = {
     duobingoDescription:
       "Et teambyggingsspill som er perfekt for å legge til litt humor på arbeidsplassen eller i vennergruppen din. Legg til morsomme custom bingo mål og spill rundt i teamet.",
     tryItBtn: "Prøv nå",
-    catTitle: "Kattesamling",
+    catTitle: "Kjæledyr-kassa",
   },
 };
 
@@ -127,7 +127,7 @@ const contact_content = {
   no: {
     contactTiltle: "Kontakt meg",
     contactDescription:
-      "Har du et forretningsforslag eller ønsker å samarbeide med meg? Ta gjerne kontakt på e-post eller telefon!",
+      "Hvis mine evner og erfaring er noe du ser etter, kontakt meg på epost eller telefon. Jeg er veldig åpen for alle henvendelser!",
     contactJobTitle: "Full-stack utvikler",
   },
 };
@@ -137,25 +137,21 @@ const about_content = {
     jobTitle: "Full-Stack Developer",
     locationClass: "Oslo, Norway",
     locationClass2: "Lørenskog, Norway",
-    overviewTitle: "Overview",
+    overviewTitle: "OVERVIEW",
     overviewDescription:
-      "With a bachelor's degree in programming, I have gained a passion for innovation, along with a diverse skill set in various technologies. Structured, efficient, and loyal, maintaining a positive and inspired attitude regardless of the challenge is a constant trait. A strong passion for creativity drives involvement in multiple personal projects. Experience includes working both independently and in teams using agile methodologies.",
-    employmentTitle: "Employment history",
+      "With a bachelor's in programming, I have found my passion for innovation. Structured, efficient, loyal with a strong passion for creativity.",
+    employmentTitle: "EMPLOYMENT HISTORY",
     apcoaJobTitle: "Facilityadmin/Fullstack developer",
     apcoaCompanyName: "Apcoa Norway AS",
-    selfEmployedDate: "January 2023 - Today",
     apcoaDate: "August 2023 - today",
     millientDate: "January 2023 - June 2023",
     millientJobTitle: "Backend developer -",
-    selfEmployedTitle: "Fullstack Developer -",
     apcoaDescription:
-      "I started my position at Apcoa as a developer for Facilityadmin, their master data system that forms the foundation for all of Apcoa's services. This was a sudden but incredibly educational start to my developer career, without any seniors to learn from. I quickly had to familiarize myself with the codebase to fix existing issues and further develop the systems. Apcoa is a European leader in ANPR technology, and my role encompasses everything from writing clean SQL queries, setting up server environments, migrating large amounts of data from external systems to internal ones, and developing the system responsible for tasks such as price calculation and parking management for major third-party clients. This service is written in Python with Django as the framework. The services my system interacts with use other technologies, and as a result, I have gained experience with, among other things, Node.js, Vue, Jenkins, and NGINX.",
+      "Developer for Apcoa's 'Facilityadmin', their master data layer that forms the foundation for all of Apcoa's services. Here i write plain SQL queries, migrate large amounts of data and further develop the pricecalculator and parking management for major third-party clients.",
     millientDescription:
       "I developed a customer portal for Millients existing solution. Constructed an API with Java using Spring, and modeled the database with PostgreSQL.",
-    selfEmployedCompany: "Self employed -",
-    selfEmployedDescription:
-      "I always have personal projects underway. My goal is to learn as much as I can, create something fun, and enjoy the process along the way. My latest major project is ",
-    educationTitle: "Education",
+
+    educationTitle: "EDUCATION",
     bachelorDescription:
       "- Bachelor in Programming at Kristiania University College.",
   },
@@ -163,26 +159,22 @@ const about_content = {
     jobTitle: "Full-stack utvikler",
     locationClass: "Oslo, Norge",
     locationClass2: "Lørenskog, Norge",
-    overviewTitle: "Oversikt",
+    overviewTitle: "OVERSIKT",
     overviewDescription:
-      "Med en bachelor i programmering, har jeg funnet en lidenskap for innovasjon, og en rekke kunnskaper i forskjellige teknologier. Strukturert, effektiv og lojal, med en positiv og inspirert holdning som bevares uansett utfordring. En sterk lidenskap for kreativitet driver engasjement i flere personlige prosjekter. Erfaring inkluderer arbeid både selvstendig og i team ved bruk av smidige metodikker.",
-    employmentTitle: "ArbeidsHistorikk",
-    apcoaJobTitle: "Facilityadmin/Fullstack utvikler",
+      "Med en bachelor i programmering, har jeg funnet en lidenskap for innovasjon. Strukturert, effektiv og lojal, med en sterk lidenskap for kreativitet.",
+    employmentTitle: "ARBEIDSHISTORIKK",
+    apcoaJobTitle: "Facilityadmin/Fullstack-utvikler",
     apcoaCompanyName: "Apcoa Norge AS",
-    selfEmployedDate: "Januar 2023 - d.d",
+
     apcoaDate: "August 2023 - d.d",
     millientDate: "Januar 2023 - Juni 2023",
-    millientJobTitle: "Backend utvikler -",
-    selfEmployedTitle: "Fullstack utvikler -",
-    selfEmployedCompany: "Selvstendig -",
-    selfEmployedDescription:
-      "Jeg har alltid personlige prosjekter på gang. Målet mitt er å lære mest mulig, skape noe morsomt og ha det gøy underveis. Mitt nyeste store prosjekt er ",
+    millientJobTitle: "Backend-utvikler -",
 
     apcoaDescription:
-      "Jeg startet min stilling i Apcoa som utvikler av Facilityadmin, deres master data system som danner grunnlaget for alle Apcoas tjenester. Dette var en brå, men utrolig lærerrik start på utvikler-karrieren, uten seniorer jeg kunne lære fra. Jeg måtte raskt sette meg inn i kodebasen for å kunne fikse eksisterende feil i tillegg til å videreutvikle systemene. Apcoa er ledende i Europa på ANPR-teknologi, og min rolle består av alt fra å skrive rene SQL-spørringer, sette opp server miljøer, migrere store mengder data fra eksterne systemer til interne og videreutvikle systemet som står for bl.a priskalkulator og administrering av parkering til store tredjeparts kunder. Denne tjenesten er skrevet i Python med Django som rammeverk. Tjenestene mitt system jobber opp mot bruker andre teknologier, og jeg har grunnet dette satt meg inn i bl.a. node, vue, jenkins og NGINX. ",
+      "Utviklet Apcoa's masterdata system, 'Facilityadmin'. Her skriver jeg rene SQL-spørringer, migrere store mengder data fra eksterne systemer og videreutvikler bl.a priskalkulator og administrering av parkeringsportaler til store tredjeparts kunder.",
     millientDescription:
-      "Jeg utviklede en kundeopplevelse for Milliente eksisterende løsning. Konstruerte en API med Java med Spring, og modellert databasen med PostgreSQL.",
-    educationTitle: "Utdanning",
+      "Utviklet en kundeopplevelse for Milliente eksisterende løsning. Konstruerte ett API med Java med Spring, og modellert databasen med PostgreSQL.",
+    educationTitle: "UTDANNING",
     bachelorDescription: "- Bachelor i Programmering ved HøyskolenKristiania.",
   },
 };
@@ -209,9 +201,6 @@ function change_about_content() {
     document.querySelectorAll(".apcoaCompanyName").forEach((h4) => {
       h4.innerText = about_content.en.apcoaCompanyName;
     });
-    document.querySelectorAll(".selfEmployedDate").forEach((p) => {
-      p.innerText = about_content.en.selfEmployedDate;
-    });
     document.getElementById("apcoaDate").innerText = about_content.en.apcoaDate;
     document.querySelectorAll(".millientDate").forEach((p) => {
       p.innerText = about_content.en.millientDate;
@@ -219,18 +208,14 @@ function change_about_content() {
     document.querySelectorAll(".millientJobTitle").forEach((h4) => {
       h4.innerText = about_content.en.millientJobTitle;
     });
-    document.querySelectorAll(".selfEmployedTitle").forEach((h4) => {
-      h4.innerText = about_content.en.selfEmployedTitle;
-    });
+
     document.querySelectorAll(".apcoaDescription").forEach((p) => {
       p.innerText = about_content.en.apcoaDescription;
     });
     document.querySelectorAll(".millientDescription").forEach((p) => {
       p.innerText = about_content.en.millientDescription;
     });
-    document.querySelectorAll(".selfEmployedDescription").forEach((p) => {
-      p.innerText = about_content.en.selfEmployedDescription;
-    });
+
     document.getElementById("educationTitle").innerText =
       about_content.en.educationTitle;
     document.getElementById("bachelorDescription").innerText =
@@ -255,9 +240,7 @@ function change_about_content() {
     document.querySelectorAll(".apcoaCompanyName").forEach((h4) => {
       h4.innerText = about_content.no.apcoaCompanyName;
     });
-    document.querySelectorAll(".selfEmployedDate").forEach((p) => {
-      p.innerText = about_content.no.selfEmployedDate;
-    });
+
     document.getElementById("apcoaDate").innerText = about_content.no.apcoaDate;
     document.querySelectorAll(".millientDate").forEach((p) => {
       p.innerText = about_content.no.millientDate;
@@ -265,18 +248,14 @@ function change_about_content() {
     document.querySelectorAll(".millientJobTitle").forEach((h4) => {
       h4.innerText = about_content.no.millientJobTitle;
     });
-    document.querySelectorAll(".selfEmployedTitle").forEach((h4) => {
-      h4.innerText = about_content.no.selfEmployedTitle;
-    });
+
     document.querySelectorAll(".apcoaDescription").forEach((p) => {
       p.innerText = about_content.no.apcoaDescription;
     });
     document.querySelectorAll(".millientDescription").forEach((p) => {
       p.innerText = about_content.no.millientDescription;
     });
-    document.querySelectorAll(".selfEmployedDescription").forEach((p) => {
-      p.innerText = about_content.no.selfEmployedDescription;
-    });
+
     document.getElementById("educationTitle").innerText =
       about_content.no.educationTitle;
     document.getElementById("bachelorDescription").innerText =

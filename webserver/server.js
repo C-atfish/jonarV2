@@ -2,7 +2,11 @@ import express from "express";
 
 const server = express();
 
-server.get("/api/download-cv", (req, res) => {
+server.get("/ping", (req, res) => {
+  res.status(200).send("All good in the hood!");
+});
+
+server.get("/download-cv", (req, res) => {
   const language = req.query.lang;
 
   if (language === "norwegian") {
