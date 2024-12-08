@@ -13,7 +13,6 @@ on some links, have a hand/mouse/pointer that comes up and imitates the click so
   - Projects page - DONE
   - Contact page - DONE
 
-- On page load, laguage is null in dropdown
 - Make the project items in the project page have a theme specific to that project
 
 - More proffesional colors on the business card
