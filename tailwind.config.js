@@ -20,6 +20,7 @@ module.exports = {
         main7: "#a42559",
         // Foreground color
         main8: "#88737c",
+        main9: "#929096",
         carousel: "#394e86",
         siegeGreenBG: "#ABC4AB",
         siegeYellowBG: "#d4a373",
