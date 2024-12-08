@@ -1,0 +1,8 @@
+#duobingoBG {
+  height: 100%;
+  background-image: url("images/DuoBingoBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+}

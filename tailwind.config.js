@@ -21,6 +21,12 @@ module.exports = {
         // Foreground color
         main8: "#88737c",
         carousel: "#394e86",
+        siegeGreenBG: "#ABC4AB",
+        siegeYellowBG: "#d4a373",
+        siegeDarkBrown: "#6D4C3D",
+        siegeLightYellow: "#E6C897",
+        duobingoRed: "#b80000",
+        duobingoYellow: "#fce8ccf2",
       },
     },
   },
