@@ -457,7 +457,7 @@ function change_index_content() {
 window.onload = () => {
   console.log("LOADED");
   const chosen_lang = localStorage.getItem("language");
-  if (chosen_lang == null) {
+  if (chosen_lang == null || chosen_lang == "null") {
     console.log("defaulting to english");
     localStorage.setItem("language", "english");
   } else {
