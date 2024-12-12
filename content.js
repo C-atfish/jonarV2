@@ -312,6 +312,8 @@ function change_projects_content() {
 }
 function change_header_content() {
   const chosen_lang = localStorage.getItem("language");
+  console.log("CHOSEN LANG!!", chosen_lang);
+
   if (chosen_lang === "english") {
     document.getElementById("home-btn").innerText = header_content.en.home_btn;
     document.getElementById("about-btn").innerText =
@@ -454,7 +456,7 @@ function change_index_content() {
   }
 }
 
-window.onload = () => {
+window.addEventListener("load", () => {
   console.log("LOADED");
   const chosen_lang = localStorage.getItem("language");
   if (chosen_lang == null || chosen_lang == "null") {
@@ -465,7 +467,7 @@ window.onload = () => {
     document.getElementById("languages").value = chosen_lang;
   }
   choose_language(chosen_lang);
-};
+});
 
 function choose_language(language) {
   console.log(language);

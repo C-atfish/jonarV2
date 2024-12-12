@@ -15,8 +15,8 @@
     ></script>
     <script src="content.js"></script>
     <script src="shared.js"></script>
-    <script src="projects.js"></script>
     <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="shared.css" />
     <link rel="stylesheet" href="projects.css" />
   </head>
   <body class="bg-main1 text-white overflow-hidden">
@@ -368,4 +368,15 @@
       </div>
     </div>
   </body>
+  <script>
+    window.addEventListener("load", () => {
+      const image = document.getElementById("hover-image");
+      image.addEventListener("mouseover", () => {
+        image.src = "images/Questmaster2.png";
+      });
+      image.addEventListener("mouseout", () => {
+        image.src = "images/Questmaster.png";
+      });
+    });
+  </script>
 </html>
