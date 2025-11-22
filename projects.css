@@ -6,3 +6,35 @@
   background-size: cover;
   backdrop-filter: blur(10px);
 }
+
+#sticksyBG {
+  position: relative;
+  overflow: hidden;
+  background-image: url("images/sticksy-img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 320px;
+}
+
+.sticksy-wrapper {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(3px);
+  padding: 1.5rem;
+}
+
+.sticksy-btn-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.sticksy-btn {
+  width: fit-content;
+
+  border-radius: 8px;
+
+  padding-inline: 20px;
+  padding-block: 10px;
+  background: linear-gradient(45deg, #4a90e2, #b94e3a);
+}

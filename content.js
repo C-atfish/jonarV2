@@ -103,11 +103,15 @@ const projects_content = {
       "An idle online strategy game based on the roman times, where you can fight other players, found new villages and take over the world!",
     duobingoDescription:
       "A teambuilding game perfect to add some fun to your workplace or friend group. Add custom quirks and play around in the team.",
+    sticksyHeader: "Unique Stickers for Every Occasion",
+    sticksyDescription: "Express yourself with high-quality stickers!",
     tryItBtn: "Try it",
     catTitle: "Pet collection",
   },
   no: {
     projectsPageTitle: "Personlige prosjekter",
+    sticksyHeader: "Unike klistremerker for enhver anledning",
+    sticksyDescription: "Uttrykk deg med klistremerker av høy kvalitet!",
     siegeDescription:
       "Et browser multiplayer strategispill hvor du kan kjempe mot andre spillere, finne nye byer og ta over verden!",
     duobingoDescription:
@@ -296,6 +300,10 @@ function change_projects_content() {
     });
     document.getElementById("catTitle").innerText =
       projects_content.en.catTitle;
+    document.getElementById("sticksyHeader").innerText =
+      projects_content.en.sticksyHeader;
+    document.getElementById("sticksyDescription").innerText =
+      projects_content.en.sticksyDescription;
   } else if (chosen_lang === "norwegian") {
     document.getElementById("projectsPageTitle").innerText =
       projects_content.no.projectsPageTitle;
@@ -308,6 +316,10 @@ function change_projects_content() {
     });
     document.getElementById("catTitle").innerText =
       projects_content.no.catTitle;
+    document.getElementById("sticksyHeader").innerText =
+      projects_content.no.sticksyHeader;
+    document.getElementById("sticksyDescription").innerText =
+      projects_content.no.sticksyDescription;
   }
 }
 function change_header_content() {
