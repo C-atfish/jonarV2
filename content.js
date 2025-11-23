@@ -177,13 +177,13 @@ const about_content = {
     apcoaJobTitle: "Facilityadmin/Fullstack-utvikler",
     apcoaCompanyName: "Apcoa Norge AS",
 
-    apcoaDate: "August 2023 - d.d",
+    apcoaDate: "August 2023 - July 2025",
     millientDate: "Januar 2023 - Juni 2023",
     millientJobTitle: "Backend-utvikler -",
     stemDescription:
       "I Stem Agency jobber jeg nært med designere og prosjekt ledere for å lage spesielt tilpassede nettsider til et bredt spekter av kunder. Vi bruker wordpress for å gi kunden full kontroll over sitt eget innhold, innenfor de rammene vi setter. En hektisk arbeidshverdag, med mange prosjekter gående samtidig, trives jeg veldig godt med å utfordre megselv i nye aspekter.",
     apcoaDescription:
-      "Utviklet Apcoa's masterdata system, 'Facilityadmin'. Her skriver jeg rene SQL-spørringer, migrere store mengder data fra eksterne systemer og videreutvikler bl.a priskalkulator og administrering av parkeringsportaler til store tredjeparts kunder.",
+      "Utviklet Apcoa's masterdata system, 'Facilityadmin'. Her skrev jeg rene SQL-spørringer, migrerte store mengder data fra eksterne systemer og videreutvikler bl.a priskalkulatoren og administrering av parkeringsportaler til store tredjeparts kunder.",
     millientDescription:
       "Utviklet en kundeopplevelse for Milliente eksisterende løsning. Konstruerte ett API med Java med Spring, og modellert databasen med PostgreSQL.",
     educationTitle: "UTDANNING",
