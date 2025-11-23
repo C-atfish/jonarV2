@@ -145,16 +145,20 @@ const about_content = {
     overviewDescription:
       "With a bachelor's in programming, I have found my passion for innovation. Structured, efficient, loyal with a strong passion for creativity.",
     employmentTitle: "EMPLOYMENT HISTORY",
+    stemJobTitle: "Fullstack developer",
+    stemCompanyName: "Stem Agency AS",
+    stemDate: "July 2025 - today",
     apcoaJobTitle: "Facilityadmin/Fullstack developer",
     apcoaCompanyName: "Apcoa Norway AS",
-    apcoaDate: "August 2023 - today",
+    apcoaDate: "August 2023 - July 2025",
     millientDate: "January 2023 - June 2023",
     millientJobTitle: "Backend developer -",
     apcoaDescription:
-      "Developer for Apcoa's 'Facilityadmin', their master data layer that forms the foundation for all of Apcoa's services. Here i write plain SQL queries, migrate large amounts of data and further develop the pricecalculator and parking management for major third-party clients.",
+      "Developer for Apcoa's 'Facilityadmin', their master data layer that forms the foundation for all of Apcoa's services. Here i wrote plain SQL queries, migrated large amounts of data and further developed the pricecalculator and parking management for major third-party clients.",
     millientDescription:
       "I developed a customer portal for Millients existing solution. Constructed an API with Java using Spring, and modeled the database with PostgreSQL.",
-
+    stemDescription:
+      "At Stem Agency i work closely with designers and project leaders to tailormake custom websites for a broad variety of clients. We use Wordpress to give our client control of their own content, withing the limitations we set. With a hectic workday with many projects going on at the same time, i really enjoyed working and improving on new aspects of myself.",
     educationTitle: "EDUCATION",
     bachelorDescription:
       "- Bachelor in Programming at Kristiania University College.",
@@ -167,13 +171,17 @@ const about_content = {
     overviewDescription:
       "Med en bachelor i programmering, har jeg funnet en lidenskap for innovasjon. Strukturert, effektiv og lojal, med en sterk lidenskap for kreativitet.",
     employmentTitle: "ARBEIDSHISTORIKK",
+    stemJobTitle: "Fullstack-utvikler",
+    stemCompanyName: "Stem Agency AS",
+    stemDate: "Juli 2025 - Dags dato",
     apcoaJobTitle: "Facilityadmin/Fullstack-utvikler",
     apcoaCompanyName: "Apcoa Norge AS",
 
     apcoaDate: "August 2023 - d.d",
     millientDate: "Januar 2023 - Juni 2023",
     millientJobTitle: "Backend-utvikler -",
-
+    stemDescription:
+      "I Stem Agency jobber jeg nært med designere og prosjekt ledere for å lage spesielt tilpassede nettsider til et bredt spekter av kunder. Vi bruker wordpress for å gi kunden full kontroll over sitt eget innhold, innenfor de rammene vi setter. En hektisk arbeidshverdag, med mange prosjekter gående samtidig, trives jeg veldig godt med å utfordre megselv i nye aspekter.",
     apcoaDescription:
       "Utviklet Apcoa's masterdata system, 'Facilityadmin'. Her skriver jeg rene SQL-spørringer, migrere store mengder data fra eksterne systemer og videreutvikler bl.a priskalkulator og administrering av parkeringsportaler til store tredjeparts kunder.",
     millientDescription:
@@ -219,6 +227,17 @@ function change_about_content() {
     document.querySelectorAll(".millientDescription").forEach((p) => {
       p.innerText = about_content.en.millientDescription;
     });
+    document.querySelectorAll(".stemDescription").forEach((p) => {
+      p.innerText = about_content.en.stemDescription;
+    });
+    document.querySelectorAll(".stemJobTitle").forEach((h4) => {
+      h4.innerText = about_content.en.stemJobTitle;
+    });
+    document.getElementById("stemDate").innerText = about_content.en.stemDate;
+
+    document.querySelectorAll(".stemCompanyName").forEach((h4) => {
+      h4.innerText = about_content.en.stemCompanyName;
+    });
 
     document.getElementById("educationTitle").innerText =
       about_content.en.educationTitle;
@@ -259,6 +278,16 @@ function change_about_content() {
     document.querySelectorAll(".millientDescription").forEach((p) => {
       p.innerText = about_content.no.millientDescription;
     });
+    document.querySelectorAll(".stemDescription").forEach((p) => {
+      p.innerText = about_content.no.stemDescription;
+    });
+    document.querySelectorAll(".stemJobTitle").forEach((h4) => {
+      h4.innerText = about_content.no.stemJobTitle;
+    });
+    document.querySelectorAll(".stemCompanyName").forEach((h4) => {
+      h4.innerText = about_content.no.stemCompanyName;
+    });
+    document.getElementById("stemDate").innerText = about_content.no.stemDate;
 
     document.getElementById("educationTitle").innerText =
       about_content.no.educationTitle;
