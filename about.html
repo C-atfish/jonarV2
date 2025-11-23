@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Jonar Larsgard – developer building games, apps, and web experiences."
+    />
+
     <title>Jonar.no - About</title>
     <link rel="stylesheet" href="shared.css" />
     <link rel="stylesheet" href="about.css" />
@@ -132,12 +137,16 @@
                     CV
                   </a>
 
-                  <!-- Image -->
-                  <img
-                    class="w-48 h-44 md:w-96 md:h-72 rounded shadow-lg aspect-auto"
-                    src="/images/me.jpg"
-                    alt="Image of Jonar"
-                  />
+                  <!-- Fixed-size frame, same as rotated bg -->
+                  <div
+                    class="w-48 h-44 md:w-96 md:h-72 rounded shadow-lg overflow-hidden"
+                  >
+                    <img
+                      src="/images/me2.jpg"
+                      alt="Image of Jonar"
+                      class="profile-pic w-full h-full object-cover block"
+                    />
+                  </div>
                 </div>
               </div>
 

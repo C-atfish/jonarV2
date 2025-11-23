@@ -33,3 +33,11 @@
 .img-bg {
   transform: rotate(-3deg);
 }
+
+.profile-pic {
+  object-fit: cover !important;
+  object-position: center 17%;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
