@@ -56,6 +56,7 @@ const index_content = {
     homeService1Description7:
       "Sophisticated order and queue systems, with database integration.",
     homeViewProjectsBtn: "View peronal Projects",
+    homeViewContactsBtn: "Contact me",
   },
   no: {
     hello_text: "Hei, mitt navn er Jonar!",
@@ -93,6 +94,7 @@ const index_content = {
     homeService1Description7:
       "Sofistikerte bestilling og kø systemer med databaseintegrasjon og langtids vedlikehold.",
     homeViewProjectsBtn: "Se personlige prosjekter",
+    homeViewContactsBtn: "Kontakt meg",
   },
 };
 
@@ -441,6 +443,8 @@ function change_index_content() {
       index_content.en.homeService1Description7;
     document.getElementById("homeViewProjectsBtn").innerText =
       index_content.en.homeViewProjectsBtn;
+    document.getElementById("homeViewContactsBtn").innerText =
+      index_content.en.homeViewContactsBtn;
   } else if (chosen_lang === "norwegian") {
     document.getElementById("hello-text").innerText =
       index_content.no.hello_text;
@@ -494,6 +498,8 @@ function change_index_content() {
       index_content.no.homeService1Description7;
     document.getElementById("homeViewProjectsBtn").innerText =
       index_content.no.homeViewProjectsBtn;
+    document.getElementById("homeViewContactsBtn").innerText =
+      index_content.no.homeViewContactsBtn;
   }
 }
 

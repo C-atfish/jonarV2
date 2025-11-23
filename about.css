@@ -1,4 +1,38 @@
-/*IMG in the carousel*/
+.about-wrapper {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.6fr);
+    align-items: flex-start;
+  }
+}
+
+.info-card {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background-color: #8c7082;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.cv-pill {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.tech-strip {
+  padding: 0.75rem 1.5rem;
+  overflow: hidden;
+}
+
 .logoImage {
   width: 100px;
   height: auto;
@@ -36,7 +70,7 @@
 
 .profile-pic {
   object-fit: cover !important;
-  object-position: center 50%;
+  object-position: center 10%;
   width: 100% !important;
   height: 100% !important;
   display: block;

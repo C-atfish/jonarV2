@@ -88,18 +88,15 @@
         </nav>
       </div>
 
+      <!-- MAIN CONTENT -->
       <div class="flex-auto flex justify-center overflow-x-auto z-10">
-        <!--<div class="flex-grow md:mx-32 lg:mx-96 ">-->
-        <div
-          id="home"
-          class="p-2 m-2 sm:max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl"
-        >
-          <!--   <div  id="home" class="  p-2 m-2">-->
+        <div id="home" class="p-4 m-2 w-full max-w-6xl mx-auto">
           <div class="intro rounded relative md:pr-4">
-            <div class="flex flex-col md:flex-row">
+            <!-- HERO -->
+            <div class="flex flex-col md:flex-row gap-4 mb-4">
               <!--ANIMATED TEXT-->
               <div
-                class="bubble bubble-bottom-left flex-grow w-full md:w-auto md:flex-shrink-0 md:mr-8 lg:mr-16 my-auto md:my-0 shadow-lg"
+                class="bubble bubble-bottom-left flex-grow w-full md:w-auto md:flex-shrink-0 shadow-lg"
               >
                 <div
                   class="flex items-center justify-center text-center h-full"
@@ -107,7 +104,9 @@
                   <div
                     class="text-base md:text-lg xl:text-xl 2xl:text-3xl p-4 min-w-[22vw]"
                   >
-                    <h1 id="hello-text">Hi, I'm Jonar,</h1>
+                    <h1 id="hello-text" class="font-semibold">
+                      Hi, I'm Jonar,
+                    </h1>
                     <p class="inline" id="hello-text2">a</p>
                     <p
                       class="inline typer text-main2 underline"
@@ -117,63 +116,89 @@
                 </div>
               </div>
 
+              <!-- WHAT DO I DO -->
               <div
-                class="bg-main7 flex-grow w-full md:w-fit p-4 mt-12 md:mt-0 shadow-lg rounded"
+                class="bg-main7 flex-grow w-full md:w-fit p-6 shadow-lg rounded-lg flex flex-col justify-between mt-8 md:mt-0"
               >
-                <h4 class="text-2xl text-center md:text-start" id="homeDoText">
-                  What do I do?
-                </h4>
-                <div
-                  class="md:w-96 text-base md:text-lg xl:text-xl text-center md:text-start"
-                >
-                  <p id="homeDoDescription1">With a wide variety of</p>
-
-                  <a
-                    href="about.html"
-                    class="text-blue-400"
-                    id="homeDoDescription2"
-                    >technical skills</a
+                <div>
+                  <h4
+                    class="text-2xl font-semibold mb-3 text-center md:text-start"
+                    id="homeDoText"
                   >
-                  <p id="homeDoDescription3" class="inline">
-                    I have gathered in different technologies, I can provide a
-                    tailor-made application and customer experience to fit your
-                    needs.
-                  </p>
+                    What do I do?
+                  </h4>
+                  <div
+                    class="md:w-96 text-base md:text-lg xl:text-xl text-center md:text-start space-y-2"
+                  >
+                    <p id="homeDoDescription1">With a wide variety of</p>
+
+                    <a
+                      href="about.html"
+                      class="text-blue-300 underline underline-offset-4"
+                      id="homeDoDescription2"
+                      >technical skills</a
+                    >
+                    <p id="homeDoDescription3" class="inline">
+                      I can provide a tailor-made application and customer
+                      experience to fit your needs.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- CTAS -->
+                <div
+                  class="mt-6 flex flex-col sm:flex-row gap-3 justify-center md:justify-start gap-2"
+                >
+                  <a
+                    href="projects.html"
+                    class="bg-main6 px-5 py-2 rounded-md text-sm md:text-base font-semibold hover:bg-main5 transition-colors text-white text-center"
+                    id="homeViewProjectsBtn"
+                    >View personal projects</a
+                  >
+                  <a
+                    href="contact.html"
+                    id="homeViewContactsBtn"
+                    class="border border-main6 px-5 py-2 rounded-md text-sm md:text-base font-semibold hover:bg-main6 hover:text-white transition-colors text-center"
+                  >
+                    Contact me
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div class="mt-12">
+            <!-- SERVICES -->
+            <div class="mt-16">
               <h4
-                class="text-2xl font-bold text-center mb-4"
+                class="text-2xl font-bold text-center mb-8 tracking-wide"
                 id="homeServiceTitle"
               >
                 My services
               </h4>
-              <ul class="grid w-full grid-cols-1 lg:grid-cols-3 gap-4">
-                <li class="p-2 bg-main8 rounded p-4 shadow-lg">
-                  <div class="pb-4">
-                    <div class="text-center mb-2">
-                      <i
-                        class="fa-solid fa-mobile-screen mr-2 text-xl text-4xl"
-                      ></i>
+              <ul class="grid w-full grid-cols-1 lg:grid-cols-3 gap-6">
+                <li class="service-card bg-main8">
+                  <div class="pb-2">
+                    <div class="text-center mb-4">
+                      <i class="fa-solid fa-mobile-screen text-4xl"></i>
                     </div>
                     <h4
-                      class="text-xl font-bold text-center"
+                      class="text-xl font-bold text-center mb-3"
                       id="homeService1Title"
                     >
-                      Fullstack web and mobile application
+                      Fullstack web and mobile applications
                     </h4>
-                    <p id="homeService1Description1">
+                    <p
+                      class="mb-3 text-sm md:text-base"
+                      id="homeService1Description1"
+                    >
                       Web and mobile solutions, including:
                     </p>
-                    <ul>
+                    <ul class="space-y-2 text-sm md:text-base">
                       <li>
                         <p
                           class="inline font-bold"
                           id="homeService1Description2"
                         >
-                          E-commerce Solutions:
+                          E-commerce solutions:
                         </p>
                         <p class="inline" id="homeService1Description3">
                           Developing web stores for seamless product
@@ -186,11 +211,11 @@
                           class="inline font-bold"
                           id="homeService1Description4"
                         >
-                          Customer Engagement Systems:
+                          Customer engagement systems:
                         </p>
                         <p class="inline" id="homeService1Description5">
-                          Review, ratings, bonus, and discount systems to
-                          enhance customer loyalty.
+                          Review, ratings, bonus and discount systems to enhance
+                          customer loyalty.
                         </p>
                       </li>
 
@@ -199,10 +224,10 @@
                           class="inline font-bold"
                           id="homeService1Description6"
                         >
-                          Restaurant Order and Queue Apps
+                          Restaurant order &amp; queue apps:
                         </p>
                         <p class="inline" id="homeService1Description7">
-                          Sophisticated order and queue systems, with database
+                          Sophisticated order and queue systems with database
                           integration.
                         </p>
                       </li>
@@ -210,86 +235,96 @@
                   </div>
                 </li>
 
-                <li class="p-2 bg-main8 rounded p-4 shadow-lg">
-                  <div class="pb-4">
-                    <div class="text-center mb-2">
-                      <i class="fa-solid fa-cloud mr-2 text-xl text-4xl"></i>
+                <li class="service-card bg-main8">
+                  <div class="pb-2">
+                    <div class="text-center mb-4">
+                      <i class="fa-solid fa-cloud text-4xl"></i>
                     </div>
                     <h4
-                      class="text-xl text-center font-bold"
+                      class="text-xl text-center font-bold mb-3"
                       id="homeService2Title"
                     >
                       Cloud architect
                     </h4>
-                    <p id="homeService2Description">
+                    <p
+                      class="text-sm md:text-base leading-relaxed"
+                      id="homeService2Description"
+                    >
                       I have experience in setting up and hosting complex,
-                      secure, and high-performance applications, both onsite and
+                      secure and high-performance applications, both on-site and
                       in the cloud. My primary focus is on optimal performance,
-                      scalability, and availability.
+                      scalability and availability.
                     </p>
                   </div>
                 </li>
 
-                <li class="bg-main8 rounded p-4 shadow-lg">
-                  <div class="text-center mb-2">
-                    <i class="fa-solid fa-hammer mr-2 text-xl text-4xl"></i>
+                <li class="service-card bg-main8">
+                  <div class="pb-2">
+                    <div class="text-center mb-4">
+                      <i class="fa-solid fa-hammer text-4xl"></i>
+                    </div>
+                    <h4
+                      class="text-xl text-center font-bold mb-3"
+                      id="homeService3Title"
+                    >
+                      System maintenance and consultation
+                    </h4>
+                    <p
+                      class="mb-3 text-sm md:text-base"
+                      id="homeService3Description1"
+                    >
+                      Maintenance services for new and existing systems,
+                      including:
+                    </p>
+                    <ul class="space-y-2 text-sm md:text-base">
+                      <li>
+                        <p
+                          class="inline font-bold"
+                          id="homeService3Description2"
+                        >
+                          System maintenance:
+                        </p>
+                        <p class="inline" id="homeService3Description3">
+                          Designing infrastructure for efficiency and
+                          scalability.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p
+                          class="inline font-bold"
+                          id="homeService3Description4"
+                        >
+                          Architecture design:
+                        </p>
+                        <p class="inline" id="homeService3Description5">
+                          Updates, troubleshooting and optimization for peak
+                          system performance.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p
+                          class="inline font-bold"
+                          id="homeService3Description6"
+                        >
+                          Monitoring:
+                        </p>
+                        <p class="inline" id="homeService3Description7">
+                          Continuous monitoring to pre-emptively identify and
+                          resolve potential issues before they impact your
+                          operations.
+                        </p>
+                      </li>
+                    </ul>
                   </div>
-                  <h4
-                    class="text-xl text-center font-bold"
-                    id="homeService3Title"
-                  >
-                    System maintenance and consulation
-                  </h4>
-                  <p class="pl-4" id="homeService3Description1">
-                    Maintenance services for new and existing systems,
-                    including:
-                  </p>
-                  <ul class="ml-4">
-                    <li>
-                      <p class="inline font-bold" id="homeService3Description2">
-                        System Maintenance:
-                      </p>
-                      <p class="inline" id="homeService3Description3">
-                        Designing infrastructure for efficiency and scalability.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p class="inline font-bold" id="homeService3Description4">
-                        Architectural Design:
-                      </p>
-                      <p class="inline" id="homeService3Description5">
-                        Updates, troubleshooting, and optimization for peak
-                        system performance.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p class="inline font-bold" id="homeService3Description6">
-                        Monitoring:
-                      </p>
-                      <p class="inline" id="homeService3Description7">
-                        Continuous monitoring to preemptively identify and
-                        resolve potential issues before they impact your
-                        operations.
-                      </p>
-                    </li>
-                  </ul>
                 </li>
               </ul>
-            </div>
-
-            <div class="mt-4 grid place-items-center">
-              <a
-                href="projects.html"
-                class="bg-main6 p-2 hover:bg-main5 text-white rounded mb-4"
-                id="homeViewProjectsBtn"
-                >View peronal Projects</a
-              >
             </div>
           </div>
         </div>
       </div>
+
       <div class="flex-grow"></div>
       <div class="relative w-full p-4 bg-main4 text-center">
         &copy; 2024 Jonar. All rights reserved.
@@ -307,6 +342,8 @@
         </div>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
+
   <script src="index.js"></script>
 </html>
