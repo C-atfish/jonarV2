@@ -179,7 +179,7 @@ const about_content = {
     apcoaJobTitle: "Facilityadmin/Fullstack-utvikler",
     apcoaCompanyName: "Apcoa Norge AS",
 
-    apcoaDate: "August 2023 - July 2025",
+    apcoaDate: "August 2023 - Juli 2025",
     millientDate: "Januar 2023 - Juni 2023",
     millientJobTitle: "Backend-utvikler -",
     stemDescription:
@@ -235,7 +235,9 @@ function change_about_content() {
     document.querySelectorAll(".stemJobTitle").forEach((h4) => {
       h4.innerText = about_content.en.stemJobTitle;
     });
-    document.getElementById("stemDate").innerText = about_content.en.stemDate;
+    document.querySelectorAll(".stemDate").forEach((h4) => {
+      h4.innerText = about_content.en.stemDate;
+    });
 
     document.querySelectorAll(".stemCompanyName").forEach((h4) => {
       h4.innerText = about_content.en.stemCompanyName;
@@ -289,7 +291,9 @@ function change_about_content() {
     document.querySelectorAll(".stemCompanyName").forEach((h4) => {
       h4.innerText = about_content.no.stemCompanyName;
     });
-    document.getElementById("stemDate").innerText = about_content.no.stemDate;
+    document.querySelectorAll(".stemDate").forEach((h4) => {
+      h4.innerText = about_content.no.stemDate;
+    });
 
     document.getElementById("educationTitle").innerText =
       about_content.no.educationTitle;
