@@ -504,13 +504,11 @@ function change_index_content() {
 }
 
 window.addEventListener("load", () => {
-  console.log("LOADED");
   const chosen_lang = localStorage.getItem("language");
   if (chosen_lang == null || chosen_lang == "null") {
     console.log("defaulting to english");
     localStorage.setItem("language", "english");
   } else {
-    console.log("u had chosen " + chosen_lang);
     document.getElementById("languages").value = chosen_lang;
   }
   choose_language(chosen_lang);
@@ -520,13 +518,13 @@ function choose_language(language) {
   console.log(language);
   localStorage.setItem("language", language);
   change_header_content();
-  if (window.location.href.includes("index")) {
-    change_index_content();
-  } else if (window.location.href.includes("about")) {
+  if (window.location.href.includes("about")) {
     change_about_content();
   } else if (window.location.href.includes("contact")) {
     change_contact_content();
   } else if (window.location.href.includes("projects")) {
     change_projects_content();
+  } else {
+    change_index_content();
   }
 }
