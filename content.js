@@ -160,7 +160,7 @@ const about_content = {
     millientDescription:
       "I developed a customer portal for Millients existing solution. Constructed an API with Java using Spring, and modeled the database with PostgreSQL.",
     stemDescription:
-      "At Stem Agency i work closely with designers and project leaders to tailormake custom websites for a broad variety of clients. We use Wordpress to give our client control of their own content, withing the limitations we set. With a hectic workday with many projects going on at the same time, i really enjoyed working and improving on new aspects of myself.",
+      "At Stem Agency i work closely with designers and project leaders to tailormake custom websites for a broad variety of clients. We use Wordpress to give our client control of their own content, within the limitations we set. With a hectic workday with many projects going on at the same time, i really enjoyed working and improving on new aspects of myself.",
     educationTitle: "EDUCATION",
     bachelorDescription:
       "- Bachelor in Programming at Kristiania University College.",
