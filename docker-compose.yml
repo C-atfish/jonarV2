@@ -1,0 +1,32 @@
+services:
+  backend:
+    container_name: jonarbackend
+    build: ./webserver
+    restart: unless-stopped
+    # Reachable only on the internal network, not published to the host.
+    expose:
+      - "1001"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:1001/ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - jonarnet
+
+  frontend:
+    container_name: jonarfrontend
+    build: .
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - jonarnet
+
+networks:
+  jonarnet:
+    driver: bridge

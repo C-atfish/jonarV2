@@ -1,10 +1,13 @@
 FROM node:20-alpine
 
+ENV NODE_ENV=production
+WORKDIR /app
 
-COPY package.json ./
+# Install production dependencies (cached unless the lockfile changes)
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
 
-RUN npm install
-
+# Copy server source and CV assets
 COPY . .
 
 EXPOSE 1001

@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+webserver
+.git
+.idea
+*.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+.gitignore
