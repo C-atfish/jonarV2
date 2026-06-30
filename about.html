@@ -10,8 +10,14 @@
     />
     <link rel="icon" href="/images/me_face.png" sizes="any" />
     <title>Jonar Larsgard - About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="shared.css" />
-    <link rel="stylesheet" href="about.css?=v3" />
+    <link rel="stylesheet" href="about.css?=v4" />
     <script
       defer
       data-domain="jonar.no"
@@ -26,16 +32,17 @@
     <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="bg-main1 text-white overflow-x-hidden z-10 overflow-hidden">
+  <body class="bg-main1 text-white about-page about-bg overflow-x-hidden">
     <div id="mouseCircle" class="w-32 h-32 rounded absolute z-0">
       <div class="innerCircle">
         <img src="images/me_face.png" alt="Jonars spinning face" />
       </div>
     </div>
-    <div class="flex flex-col h-[100vh]">
+
+    <div class="flex flex-col min-h-screen">
       <!-- HEADER -->
-      <div
-        class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center z-10"
+      <header
+        class="sticky top-0 z-30 w-full p-4 bg-main4/95 backdrop-blur text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center border-b border-white/5"
       >
         <nav class="flex">
           <ul class="flex space-x-4 md:space-x-10 lg:space-x-12 text-center">
@@ -93,306 +100,214 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </header>
 
       <!-- MAIN CONTENT -->
-      <div class="flex-auto flex justify-center overflow-x-auto">
-        <div class="about-wrapper p-4 m-2 w-full max-w-6xl mx-auto">
-          <!-- NAME, TITLE AND LOCATION HEADER -->
-          <div class="text-center mb-4">
-            <h3
-              class="text-sm md:text-base text-main2 tracking-wide"
-              id="jobTitle"
-            >
-              Full Stack Developer
-            </h3>
-            <h1 class="text-2xl md:text-3xl font-bold mt-1">Jonar Larsgard</h1>
-            <p class="mt-3 text-sm md:text-base text-gray-100 max-w-xl mx-auto">
-              I build web applications, games and infrastructure with a strong
-              focus on performance, reliability and a nice user experience.
-            </p>
-          </div>
+      <main class="flex-auto">
+        <div class="about-shell">
+          <!-- HERO -->
+          <section class="about-hero">
+            <div class="hero-photo">
+              <div class="photo-glow"></div>
+              <div class="photo-frame">
+                <img
+                  src="/images/me2.jpg"
+                  alt="Portrait of Jonar Larsgard"
+                  class="profile-pic"
+                />
+              </div>
+            </div>
 
-          <div class="flex justify-center items-center mt-2 mb-6">
-            <img
-              class="mr-2 mb-1"
-              width="22"
-              height="22"
-              src="/images/pinIcon.png"
-              alt="Pin image"
-            />
-            <h4 class="no-space locationClass text-sm md:text-base">
-              Oslo, Norway
-            </h4>
-          </div>
+            <div class="hero-intro">
+              <span class="hero-eyebrow" id="jobTitle">Full Stack Developer</span>
+              <h1 class="hero-name">Jonar Larsgard</h1>
+              <p class="hero-tagline">
+                I build web applications, games and infrastructure with a strong
+                focus on performance, reliability and a nice user experience.
+              </p>
 
-          <!-- MAIN INFO GRID -->
-          <div class="bg-main5/0 rounded p-2 lg:p-3 z-[0]">
-            <div class="about-grid text-white overflow-visible rounded">
-              <!--PROFILE PICTURE-->
-              <div
-                class="relative flex justify-center items-start lg:pr-6 mt-6 md:mt-4 lg:row-span-2"
-              >
-                <!-- Rotated Background -->
-                <div
-                  class="absolute top-6 left-1/2 transform -translate-x-1/2 w-44 h-40 md:w-80 md:h-64 bg-main2 rotate-3 z-0 shadow-lg"
-                ></div>
+              <div>
+                <span class="location-chip">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span class="locationClass">Oslo, Norway</span>
+                </span>
+              </div>
 
-                <div class="relative flex justify-center items-center z-10">
-                  <!-- DOWNLOAD CV BUTTON -->
+              <div class="hero-actions">
+                <a id="downloadLink" class="btn btn-primary" href="https://jonar.no/api/download-cv">
+                  <i class="fa-solid fa-download"></i>
+                  <span>Download CV</span>
+                </a>
+                <a href="contact.html" class="btn btn-ghost">
+                  <i class="fa-regular fa-paper-plane"></i>
+                  <span>Get in touch</span>
+                </a>
+                <div class="hero-social">
                   <a
-                    id="downloadLink"
-                    class="cv-pill bg-main5 absolute -top-5 left-4 md:left-0 md:-top-6 rounded-full flex items-center space-x-2 px-4 py-1 text-sm hover:bg-main4 hover:text-main3"
-                    href="https://jonar.no/api/download-cv"
+                    class="icon-btn"
+                    href="https://github.com/C-atfish"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
                   >
-                    <i class="fa-solid fa-download"></i>
-                    <span>CV</span>
+                    <i class="fa-brands fa-github"></i>
                   </a>
-
-                  <!-- Fixed-size frame, same as rotated bg -->
-                  <div
-                    class="w-44 h-40 md:w-80 md:h-64 rounded shadow-lg overflow-hidden bg-black/40"
+                  <a
+                    class="icon-btn"
+                    href="https://www.linkedin.com/posts/jonar-larsgard-851004152_a-month-ago-i-completed-my-bachelors-in-activity-7082650659874889728-vaoS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                   >
-                    <img
-                      src="/images/me2.jpg"
-                      alt="Image of Jonar"
-                      class="profile-pic"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <!-- EDUCATION -->
-              <div class="info-card md:mb-4 mt-8 md:mt-0 bg-main8">
-                <div class="flex justify-center items-center mb-3">
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  <h4
-                    class="text-center text-xl font-bold ml-2 text-white"
-                    id="educationTitle"
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    class="icon-btn"
+                    href="https://www.instagram.com/siege.game.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
                   >
-                    EDUCATION
-                  </h4>
-                </div>
-
-                <p
-                  class="text-center text-sm md:text-base leading-relaxed"
-                  id="bachelorDescription"
-                >
-                  Bachelor in Programming at Kristiania University College.
-                </p>
-              </div>
-
-              <!-- EMPLOYMENT HISTORY -->
-              <div class="info-card lg:row-span-2 z-[10]">
-                <div
-                  class="font-bold text-xl text-white flex justify-center items-center mb-4"
-                >
-                  <i class="fa-solid fa-person-walking-luggage p-2"></i>
-                  <h4 id="employmentTitle">EMPLOYMENT HISTORY</h4>
-                </div>
-
-                <div>
-                  <ul
-                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4"
-                  >
-                    <!-- Mobile cards -->
-                    <li class="md:hidden p-4 rounded-lg shadow-md bg-main4/40">
-                      <div class="text-center mb-2">
-                        <h4 class="font-bold text-lg mb-1 stemJobTitle">
-                          Fullstack developer
-                        </h4>
-                        <h5 class="text-sm stemCompanyName">Stem Agency AS</h5>
-                      </div>
-                      <div class="text-center mb-2">
-                        <h4 class="text-xs text-gray-200 stemDate">
-                          July 2025 - Today
-                        </h4>
-                      </div>
-                      <div class="text-center mb-2">
-                        <h4 class="text-sm locationClass">Oslo, Norway</h4>
-                      </div>
-                      <div class="text-start text-sm">
-                        <p class="stemDescription">
-                          At Stem Agency i work closely with designers and
-                          project leaders to tailormake custom websites for a
-                          broad variety of clients. We use Wordpress to give our
-                          client control of their own content, within the
-                          limitations we set. With a hectic workday with many
-                          projects going on at the same time, i really enjoyed
-                          working and improving on new aspects of myself.
-                        </p>
-                      </div>
-                    </li>
-
-                    <li class="md:hidden p-4 rounded-lg shadow-md bg-main4/40">
-                      <div class="text-center mb-2">
-                        <h4 class="font-bold text-lg mb-1 apcoaJobTitle">
-                          Facilityadmin/Fullstack developer
-                        </h4>
-                        <h5 class="text-sm apcoaCompanyName">
-                          Apcoa Norway AS
-                        </h5>
-                      </div>
-                      <div class="text-center mb-2">
-                        <h4 class="text-xs text-gray-200" id="apcoaDate">
-                          August 2023 - July 2025
-                        </h4>
-                      </div>
-                      <div class="text-center mb-2">
-                        <h4 class="text-sm locationClass">Oslo, Norway</h4>
-                      </div>
-                      <div class="text-start text-sm">
-                        <p class="apcoaDescription">
-                          Developer for Apcoa's 'Facilityadmin', the master data
-                          layer that underpins all Apcoa services. I write SQL
-                          queries, migrate large data sets and further develop
-                          the price calculator and parking management for major
-                          clients.
-                        </p>
-                      </div>
-                    </li>
-
-                    <li class="md:hidden p-4 rounded-lg shadow-md bg-main4/40">
-                      <div class="text-center mb-2">
-                        <h4 class="font-bold text-lg mb-1 millientJobTitle">
-                          Backend developer
-                        </h4>
-                        <h5 class="text-sm">Millient Software</h5>
-                      </div>
-                      <div class="text-center mb-2">
-                        <h4 class="text-xs text-gray-200 millientDate">
-                          January 2023 - June 2023
-                        </h4>
-                      </div>
-                      <div class="text-center mb-2">
-                        <h4 class="text-sm locationClass">Oslo, Norway</h4>
-                      </div>
-                      <div class="text-start text-sm">
-                        <p class="millientDescription">
-                          I developed a customer portal for Millient’s existing
-                          solution. Constructed an API with Java using Spring,
-                          and modelled the database with PostgreSQL.
-                        </p>
-                      </div>
-                    </li>
-
-                    <!-- Desktop table-style -->
-                    <li class="border-b border-white/20 pb-3 hidden md:block">
-                      <div class="flex flex-wrap gap-x-2 font-bold">
-                        <h4 class="stemJobTitle">Fullstack developer</h4>
-                        <h4 class="stemCompanyName">Stem Agency AS</h4>
-                      </div>
-                      <div class="flex justify-between flex-wrap">
-                        <p class="text-gray-200 text-sm stemDate">
-                          July 2025 - Today
-                        </p>
-                        <h4 class="locationClass ml-4 text-sm">Oslo, Norway</h4>
-                      </div>
-
-                      <p
-                        class="text-start stemDescription text-sm md:text-base mt-2"
-                      >
-                        At Stem Agency i work closely with designers and project
-                        leaders to tailormake custom websites for a broad
-                        variety of clients. We use Wordpress to give our client
-                        control of their own content, within the limitations we
-                        set. With a hectic workday with many projects going on
-                        at the same time, i really enjoyed working and improving
-                        on new aspects of myself.
-                      </p>
-                    </li>
-
-                    <li class="border-b border-white/20 pb-3 hidden md:block">
-                      <div class="flex flex-wrap gap-x-2 font-bold">
-                        <h4 class="apcoaJobTitle">
-                          Facilityadmin/Fullstack developer
-                        </h4>
-                        <h4 class="apcoaCompanyName">Apcoa Norway AS</h4>
-                      </div>
-                      <div class="flex justify-between flex-wrap">
-                        <p class="text-gray-200 text-sm" id="apcoaDate">
-                          August 2023 - July 2025
-                        </p>
-                        <h4 class="locationClass ml-4 text-sm">Oslo, Norway</h4>
-                      </div>
-
-                      <p
-                        class="text-start apcoaDescription text-sm md:text-base mt-2"
-                      >
-                        I worked primarily with Python and Django, but also with
-                        MySQL and the server side – configuring NGINX and
-                        setting up deployment pipelines. The system I’m
-                        responsible for is the backbone of APCOA, handling price
-                        calculations, whitelist validations, contracts and
-                        hundreds of thousands of transactions a day.
-                      </p>
-                    </li>
-
-                    <li class="hidden md:block">
-                      <div class="flex flex-wrap gap-x-2 font-bold">
-                        <h4 class="millientJobTitle">Backend developer -</h4>
-                        <h4>Millient Software</h4>
-                      </div>
-                      <div class="flex flex-wrap">
-                        <p class="text-gray-200 text-sm millientDate">
-                          January 2023 - June 2023
-                        </p>
-                        <h4 class="locationClass ml-4 text-sm">Oslo, Norway</h4>
-                      </div>
-
-                      <p
-                        class="text-start millientDescription text-sm md:text-base mt-2"
-                      >
-                        I developed a customer portal for Millient’s existing
-                        solution. Constructed an API with Java using Spring, and
-                        modelled the database with PostgreSQL.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- OVERVIEW -->
-              <div
-                class="text-center rounded z-[10] lg:shadow-lg md:mt-8 w-full grid place-items-center order-first md:order-none"
-              >
-                <div class="md:w-96 bg-main7 rounded-lg p-4 md:p-8 shadow-lg">
-                  <div
-                    class="text-white text-xl font-bold flex justify-center mb-3"
-                  >
-                    <i class="fa-solid fa-magnifying-glass mr-2"></i>
-                    <h4 id="overviewTitle">OVERVIEW</h4>
-                  </div>
-                  <p
-                    class="text-white text-center text-sm md:text-base leading-relaxed"
-                    id="overviewDescription"
-                  >
-                    With a bachelor's in programming, I’ve found a passion for
-                    innovation. Structured, efficient and loyal – with a strong
-                    love for creativity and building things that people enjoy
-                    using.
-                  </p>
-                </div>
-              </div>
-
-              <!-- TECHNOLOGIES -->
-              <div class="text-center mt-6 lg:col-span-2">
-                <div class="tech-strip bg-main4 rounded-lg">
-                  <div
-                    id="imagesWrapper"
-                    class="carousel-inner flex items-center justify-center"
-                  >
-                    <!-- Dynamically created images filled in here -->
-                  </div>
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      <!--FOOTER-->
-      <div class="relative w-full p-4 bg-main4 text-center">
+          <!-- COLUMNS -->
+          <div class="about-columns">
+            <!-- LEFT: overview + education -->
+            <div class="col-left">
+              <section class="panel">
+                <div class="panel-title">
+                  <i class="fa-solid fa-circle-user"></i>
+                  <h2 id="overviewTitle">Overview</h2>
+                </div>
+                <p class="panel-text" id="overviewDescription">
+                  With a bachelor's in programming, I’ve found a passion for
+                  innovation. Structured, efficient and loyal — with a strong
+                  love for creativity and building things that people enjoy
+                  using.
+                </p>
+              </section>
+
+              <section class="panel">
+                <div class="panel-title">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <h2 id="educationTitle">Education</h2>
+                </div>
+                <p class="panel-text edu-line" id="bachelorDescription">
+                  Bachelor in Programming at Kristiania University College.
+                </p>
+              </section>
+            </div>
+
+            <!-- RIGHT: experience timeline -->
+            <section class="panel experience-panel">
+              <div class="panel-title">
+                <i class="fa-solid fa-briefcase"></i>
+                <h2 id="employmentTitle">Employment History</h2>
+              </div>
+
+              <ol class="timeline">
+                <li class="timeline-item">
+                  <div class="role-head">
+                    <h3 class="role-title stemJobTitle">Fullstack developer</h3>
+                    <span class="company stemCompanyName">Stem Agency AS</span>
+                  </div>
+                  <div class="role-meta">
+                    <span
+                      ><i class="fa-regular fa-calendar"></i
+                      ><span class="stemDate">July 2025 - Today</span></span
+                    >
+                    <span
+                      ><i class="fa-solid fa-location-dot"></i
+                      ><span class="locationClass">Oslo, Norway</span></span
+                    >
+                  </div>
+                  <p class="role-desc stemDescription">
+                    At Stem Agency i work closely with designers and project
+                    leaders to tailormake custom websites for a broad variety of
+                    clients. We use Wordpress to give our client control of their
+                    own content, within the limitations we set. With a hectic
+                    workday with many projects going on at the same time, i
+                    really enjoyed working and improving on new aspects of
+                    myself.
+                  </p>
+                </li>
+
+                <li class="timeline-item">
+                  <div class="role-head">
+                    <h3 class="role-title apcoaJobTitle">
+                      Facilityadmin/Fullstack developer
+                    </h3>
+                    <span class="company apcoaCompanyName">Apcoa Norway AS</span>
+                  </div>
+                  <div class="role-meta">
+                    <span
+                      ><i class="fa-regular fa-calendar"></i
+                      ><span id="apcoaDate">August 2023 - July 2025</span></span
+                    >
+                    <span
+                      ><i class="fa-solid fa-location-dot"></i
+                      ><span class="locationClass">Oslo, Norway</span></span
+                    >
+                  </div>
+                  <p class="role-desc apcoaDescription">
+                    I worked primarily with Python and Django, but also with
+                    MySQL and the server side – configuring NGINX and setting up
+                    deployment pipelines. The system I’m responsible for is the
+                    backbone of APCOA, handling price calculations, whitelist
+                    validations, contracts and hundreds of thousands of
+                    transactions a day.
+                  </p>
+                </li>
+
+                <li class="timeline-item">
+                  <div class="role-head">
+                    <h3 class="role-title millientJobTitle">Backend developer</h3>
+                    <span class="company">Millient Software</span>
+                  </div>
+                  <div class="role-meta">
+                    <span
+                      ><i class="fa-regular fa-calendar"></i
+                      ><span class="millientDate"
+                        >January 2023 - June 2023</span
+                      ></span
+                    >
+                    <span
+                      ><i class="fa-solid fa-location-dot"></i
+                      ><span class="locationClass">Oslo, Norway</span></span
+                    >
+                  </div>
+                  <p class="role-desc millientDescription">
+                    I developed a customer portal for Millient’s existing
+                    solution. Constructed an API with Java using Spring, and
+                    modelled the database with PostgreSQL.
+                  </p>
+                </li>
+              </ol>
+            </section>
+          </div>
+
+          <!-- TECH STACK -->
+          <section class="tech-band">
+            <div class="panel-title">
+              <i class="fa-solid fa-layer-group"></i>
+              <h2>Tech I work with</h2>
+            </div>
+            <div class="tech-strip">
+              <div id="imagesWrapper" class="carousel-inner">
+                <!-- Logos injected by about.js -->
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="relative w-full p-4 bg-main4 text-center border-t border-white/5">
         &copy; 2024 Jonar. All rights reserved.
         <div class="social-media">
           <a href="https://github.com/C-atfish" target="_blank">GitHub</a> |
@@ -406,7 +321,7 @@
             >Instagram</a
           >
         </div>
-      </div>
+      </footer>
     </div>
   </body>
   <script>

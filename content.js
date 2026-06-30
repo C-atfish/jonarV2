@@ -154,7 +154,7 @@ const about_content = {
     apcoaCompanyName: "Apcoa Norway AS",
     apcoaDate: "August 2023 - July 2025",
     millientDate: "January 2023 - June 2023",
-    millientJobTitle: "Backend developer -",
+    millientJobTitle: "Backend developer",
     apcoaDescription:
       "Developer for Apcoa's 'Facilityadmin', their master data layer that forms the foundation for all of Apcoa's services. Here i wrote plain SQL queries, migrated large amounts of data and further developed the pricecalculator and parking management for major third-party clients.",
     millientDescription:
@@ -163,7 +163,7 @@ const about_content = {
       "At Stem Agency i work closely with designers and project leaders to tailormake custom websites for a broad variety of clients. We use Wordpress to give our client control of their own content, within the limitations we set. With a hectic workday with many projects going on at the same time, i really enjoyed working and improving on new aspects of myself.",
     educationTitle: "EDUCATION",
     bachelorDescription:
-      "- Bachelor in Programming at Kristiania University College.",
+      "Bachelor in Programming at Kristiania University College.",
   },
   no: {
     jobTitle: "Full-stack utvikler",
@@ -181,7 +181,7 @@ const about_content = {
 
     apcoaDate: "August 2023 - Juli 2025",
     millientDate: "Januar 2023 - Juni 2023",
-    millientJobTitle: "Backend-utvikler -",
+    millientJobTitle: "Backend-utvikler",
     stemDescription:
       "I Stem Agency jobber jeg nært med designere og prosjekt ledere for å lage spesielt tilpassede nettsider til et bredt spekter av kunder. Vi bruker wordpress for å gi kunden full kontroll over sitt eget innhold, innenfor de rammene vi setter. En hektisk arbeidshverdag, med mange prosjekter gående samtidig, trives jeg veldig godt med å utfordre megselv i nye aspekter.",
     apcoaDescription:
@@ -189,7 +189,7 @@ const about_content = {
     millientDescription:
       "Utviklet en kundeopplevelse for Milliente eksisterende løsning. Konstruerte ett API med Java med Spring, og modellert databasen med PostgreSQL.",
     educationTitle: "UTDANNING",
-    bachelorDescription: "- Bachelor i Programmering ved HøyskolenKristiania.",
+    bachelorDescription: "Bachelor i Programmering ved Høyskolen Kristiania.",
   },
 };
 

@@ -33,6 +33,9 @@ html {
 
 #mouseCircle {
   /*    animation: spin 5s linear infinite;*/
+  /* Decorative cursor-follower – must never intercept clicks on the
+     content beneath it (it sits centered under the pointer). */
+  pointer-events: none;
 }
 
 .innerCircle {

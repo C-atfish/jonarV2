@@ -19,6 +19,6 @@ function addImagesToCarousel(){
 }
 
 
-addImagesToCarousel()
+// Two identical copies so the CSS marquee (translateX -50%) loops seamlessly.
 addImagesToCarousel()
 addImagesToCarousel()

@@ -1,7 +1,102 @@
+/* ============================================================
+   Home page – modern redesign (shares the About page language)
+   ============================================================ */
+
+.home-page {
+  --accent: #e2698f;
+  --accent-strong: #a42559;
+  --accent-soft: rgba(226, 105, 143, 0.16);
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --text: #f4f1f3;
+  --text-dim: #b6afb3;
+  --radius: 18px;
+  font-family: "Inter", "calibri", system-ui, sans-serif;
+}
+
+.home-bg {
+  background-color: #2c2b2e;
+  background-image:
+    radial-gradient(900px 540px at 12% -10%, rgba(164, 37, 89, 0.24), transparent 60%),
+    radial-gradient(780px 620px at 100% 0%, rgba(211, 189, 176, 0.09), transparent 55%);
+  background-attachment: fixed;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.home-page .display {
+  font-family: "Sora", "Inter", sans-serif;
+}
+
+.home-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 3vw, 3.5rem) clamp(1rem, 4vw, 2.5rem) 4rem;
+}
+
+/* ----------------------------- Hero ----------------------------- */
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: center;
+  margin-bottom: clamp(3rem, 7vw, 5.5rem);
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Sora", sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  margin-bottom: 1.25rem;
+}
+
+.hero-eyebrow i {
+  color: var(--accent);
+}
+
+.hero-name {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+}
+
+.hero-typed {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-top: 0.4rem;
+}
+
+.hero-typed #hello-text2 {
+  color: var(--text-dim);
+}
+
 .typer {
-  width: 250px;
-  border-right: 2px solid #7e1414;
-  animation: blink 0.4s step-end infinite;
+  color: var(--accent);
+  border-right: 2px solid var(--accent);
+  padding-right: 2px;
+  animation: blink 0.8s step-end infinite;
 }
 
 @keyframes blink {
@@ -10,87 +105,201 @@
     border-color: transparent;
   }
   50% {
-    border-color: #7e1414;
+    border-color: var(--accent);
   }
 }
 
-.bubble {
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.78rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.97rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent));
+  color: #fff;
+  box-shadow: 0 14px 30px -12px var(--accent-strong);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px -10px var(--accent-strong);
+}
+
+.btn-ghost {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+}
+
+/* ------------------- "What do I do?" hero card ------------------ */
+.do-card {
   position: relative;
-  font-family: sans-serif;
-  line-height: 24px;
-  background: #28af50;
-  border-radius: 40px;
-  padding: 24px;
-  text-align: center;
+  background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 0 24px 50px -30px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
 }
 
-.bubble-bottom-left:before {
+.do-card::before {
   content: "";
-  width: 0px;
-  height: 0px;
   position: absolute;
-  border-left: 24px solid #28af50;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #28af50;
-  border-bottom: 20px solid transparent;
-  left: 32px;
-  bottom: -24px;
+  top: -40%;
+  right: -30%;
+  width: 70%;
+  height: 80%;
+  background: radial-gradient(circle, var(--accent-soft), transparent 70%);
+  pointer-events: none;
 }
 
-.typer {
-  width: 250px;
-  border-right: 2px solid #7e1414;
-  animation: blink 0.4s step-end infinite;
+.do-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
 }
 
-@keyframes blink {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #7e1414;
-  }
+.do-card p,
+.do-card a {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--text-dim);
 }
 
-.bubble {
-  position: relative;
-  font-family: sans-serif;
-  line-height: 24px;
-  background: #28af50;
-  border-radius: 40px;
-  padding: 24px;
+.do-card .do-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.do-card .do-link:hover {
+  color: #fff;
+}
+
+/* --------------------------- Services -------------------------- */
+.services-head {
   text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
 }
 
-.bubble-bottom-left:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 24px solid #28af50;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #28af50;
-  border-bottom: 20px solid transparent;
-  left: 32px;
-  bottom: -24px;
+.services-eyebrow {
+  display: block;
+  font-family: "Sora", sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
 }
 
-/* New: intro width + nicer service cards */
-.intro {
-  max-width: 72rem; /* 1152px */
-  margin-left: auto;
-  margin-right: auto;
+.services-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .service-card {
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  position: relative;
+  background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  box-shadow: 0 18px 40px -28px rgba(0, 0, 0, 0.85);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.45);
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  box-shadow: 0 26px 50px -26px rgba(0, 0, 0, 0.9);
+}
+
+.service-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent));
+  box-shadow: 0 12px 24px -12px var(--accent-strong);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  line-height: 1.25;
+}
+
+.service-card .service-intro {
+  color: var(--text-dim);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+.service-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.service-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.service-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.service-list .lead {
+  font-weight: 700;
+  color: var(--text);
 }
