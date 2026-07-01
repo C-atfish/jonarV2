@@ -18,7 +18,12 @@
     ></script>
     <link rel="icon" href="/images/me_face.png" sizes="any" />
     <title>Jonar Larsgard - Projects</title>
-    <link rel="stylesheet" href="shared.css?v=2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/0716b6afca.js"
       crossorigin="anonymous"
@@ -26,375 +31,247 @@
     <script src="content.js?=v6"></script>
     <script src="shared.js"></script>
     <link rel="stylesheet" href="output.css" />
-    <link rel="stylesheet" href="shared.css?v=2" />
-    <link rel="stylesheet" href="projects.css?=v2" />
+    <link rel="stylesheet" href="shared.css?v=3" />
+    <link rel="stylesheet" href="projects.css?=v3" />
   </head>
-  <body class="bg-main1 text-white overflow-hidden">
+  <body class="bg-main1 text-white projects-page projects-bg overflow-x-hidden">
     <div id="mouseCircle" class="w-32 h-32 rounded absolute z-0">
       <div class="innerCircle">
         <img src="images/linux_face.png" alt="Linuxes spinning face" />
       </div>
     </div>
 
-    <div class="flex flex-col h-[100vh]">
+    <div class="flex flex-col min-h-screen">
       <!-- HEADER -->
-      <div
-        class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center z-10"
-      >
-        <nav class="flex">
-          <ul class="flex space-x-4 md:space-x-10 lg:space-x-12 text-center">
-            <li class="hover:text-main5">
-              <i class="fa-solid fa-house text-main8"></i>
-              <a href="index.html" id="home-btn">Home</a>
-            </li>
-            <li class="hover:text-main5">
-              <i class="fa-regular fa-address-card mr-2 text-main8"></i
-              ><a href="about.html " id="about-btn">About</a>
-            </li>
-            <li class="hover:text-main5">
-              <i class="fa-solid fa-book text-main8"></i>
-              <a href="projects.html" id="projects-btn">Projects</a>
-            </li>
-            <li class="hover:text-main5">
-              <i class="fa-solid fa-address-card text-main8"></i>
-              <a href="contact.html" id="contact-btn">Contact</a>
-            </li>
-            <li class="relative hover:text-main5">
-              <i class="fa-solid fa-globe mr-2 text-main8"></i>
-              <select
-                name="languages"
-                id="languages"
-                class="bg-main4 text-white border border-main8 rounded-md px-6 py-1 appearance-none focus:outline-none focus:ring-2 focus:ring-main5 focus:border-transparent"
-                onchange="choose_language(this.value)"
-              >
-                <option
-                  class="bg-main4 text-black"
-                  value=""
-                  selected
-                  disabled
-                  id="lang-option"
-                >
-                  Language
-                </option>
-                <option
-                  class="bg-main4 text-black"
-                  value="english"
-                  id="english-option"
-                >
-                  English
-                </option>
-                <option
-                  class="bg-main4 text-black"
-                  value="norwegian"
-                  id="norwegian-option"
-                >
-                  Norwegian
-                </option>
-              </select>
-              <i
-                class="fa-solid fa-caret-down absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none"
-              ></i>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <!--MAIN CONTENT-->
-      <div class="flex-grow z-10 overflow-x-auto flex justify-center">
-        <div
-          class="p-2 m-2 sm:max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl"
-        >
-          <h1 class="text-center text-3xl mb-4" id="projectsPageTitle">
-            Personal projects
-          </h1>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-            <!--Sticksy-->
-            <li
-              id="sticksyBG"
-              class="p-6 rounded-lg shadow-lg transform transition-transform hover:scale-[102%]"
-            >
-              <div class="sticksy-wrapper">
-                <h4 class="text-2xl font-bold mb-4 text-center">Sticksy</h4>
-                <div class="">
-                  <div class="p-4">
-                    <h4
-                      id="sticksyHeader"
-                      class="text-3xl font-semibold text-center"
-                    >
-                      Unike klistremerker for enhver anledning
-                    </h4>
-                    <p class="sticksyDescription text-center">
-                      Uttrykk deg med klistremerker av høy kvalitet!
-                    </p>
-                    <div class="sticksy-btn-wrapper">
-                      <div class="sticksy-btn">
-                        <a
-                          href="https://sticksy.no"
-                          class="underline block text-center tryItBtn font-semibold"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >Try it</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <!--Travster-->
-            <li
-              class="bg-gradient-to-b from-siegeGreenBG to-siegeYellowBG p-6 rounded-lg shadow-lg transform transition-transform hover:scale-[102%] relative"
-            >
-              <img
-                id="hover-image"
-                class="absolute bottom-0 left-0 w-32"
-                src="images/Questmaster.png"
-                alt="Siege showcase image"
-              />
-
-              <h4 class="text-2xl font-bold mb-4 text-center">Siege</h4>
-              <div
-                class="relative md:ml-4 ml-20 lg:ml-24 bg-siegeDarkBrown p-4"
-              >
-                <div
-                  class="text-lg rounded-lg shadow-md p-4 relative bg-siegeLightYellow"
-                >
-                  <p id="siegeDescription">
-                    An idle online strategy game where you can fight other
-                    players, found new villages and take over the world!
-                  </p>
-                  <div
-                    class="bg-green-600 hover:bg-green-500 w-fit mx-auto py-2 px-4 rounded"
-                  >
-                    <a
-                      href="https://siege.no"
-                      class="underline block text-center tryItBtn font-semibold"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Try it</a
-                    >
-                  </div>
-                  <span
-                    class="absolute -left-4 bottom-3 w-4 h-4 transform rotate-45"
-                  ></span>
-                </div>
-              </div>
-            </li>
-
-            <!--DUOBINGO-->
-            <li
-              id="duobingoBG"
-              class="p-6 rounded-lg shadow-lg transform transition-transform hover:scale-[102%]"
-            >
-              <h4 class="text-2xl font-bold mb-4 text-center">Duobingo</h4>
-              <div class="flex flex-col lg:flex-row items-center">
-                <div class="mt-2 text-lg md:ml-4 bg-duobingoYellow p-4">
-                  <p id="duobingoDescription" class="text-duobingoRed">
-                    A teambuilding game perfect to add some fun to your
-                    workplace or friend group. Add custom quirks and play around
-                    in the team.
-                  </p>
-                  <div
-                    class="bg-duobingoRed hover:bg-red-500 mt-4 w-fit mx-auto py-2 px-4 rounded"
-                  >
-                    <a
-                      href="https://duobingo.no"
-                      class="underline block text-center tryItBtn font-semibold"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Try it</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <div class="mt-32">
-            <div
-              class="text-center grid grid-cols-1 place-items-center bg-main4 p-4 rounded"
-            >
-              <h4 class="font-semibold text-2xl mb-2" id="catTitle">
-                Pet collection
-              </h4>
-              <div
-                class="flex space-x-4 place-items-center overflow-x-auto w-full"
-              >
-                <img
-                  src="images/carousel/carousel1.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                />
-
-                <img
-                  src="images/carousel/carousel2.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                />
-                <img
-                  src="images/carousel/carousel3.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                />
-                <img
-                  src="images/carousel/carousel4.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                />
-                <img
-                  src="images/carousel/carousel5.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel6.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel7.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel8.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel9.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel10.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel11.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel12.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel13.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel14.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel15.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel16.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel17.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel18.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel19.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel20.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel21.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel22.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel23.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel24.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel25.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel26.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel27.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-                <img
-                  src="images/carousel/carousel28.jpg"
-                  alt="My lovely cats"
-                  class="h-32 justify-center"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+      <header class="site-header">
+        <div class="nav-inner">
+          <a href="index.html" class="brand" aria-label="Jonar - Home">
+            <span class="brand-mark">JL</span>
+            <span class="brand-name">Jonar</span>
+          </a>
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link">
+              <i class="fa-solid fa-house"></i><span id="home-btn">Home</span>
+            </a>
+            <a href="about.html" class="nav-link">
+              <i class="fa-regular fa-user"></i><span id="about-btn">About</span>
+            </a>
+            <a href="projects.html" class="nav-link active">
+              <i class="fa-regular fa-folder-open"></i><span id="projects-btn">Projects</span>
+            </a>
+            <a href="contact.html" class="nav-link">
+              <i class="fa-regular fa-envelope"></i><span id="contact-btn">Contact</span>
+            </a>
+          </nav>
+          <div class="nav-lang">
+            <i class="fa-solid fa-globe nav-lang-globe"></i>
+            <select name="languages" id="languages" onchange="choose_language(this.value)">
+              <option value="" selected disabled id="lang-option">Language</option>
+              <option value="english" id="english-option">English</option>
+              <option value="norwegian" id="norwegian-option">Norwegian</option>
+            </select>
+            <i class="fa-solid fa-caret-down nav-lang-caret"></i>
           </div>
         </div>
-      </div>
+      </header>
 
-      <!--FOOTER-->
-      <div
-        class="relative w-full p-4 bg-main4 text-center scrollbar-thumb-main3"
+      <!-- MAIN CONTENT -->
+      <main class="flex-auto">
+        <div class="projects-shell">
+          <!-- PAGE HEADER -->
+          <div class="projects-head">
+            <span class="projects-eyebrow">Portfolio</span>
+            <h1 class="projects-title" id="projectsPageTitle">
+              Personal projects
+            </h1>
+            <p class="projects-subtitle">
+              A selection of things I’ve designed, built and shipped — from
+              online games to web shops. All of them are live, go try them out.
+            </p>
+          </div>
+
+          <!-- PROJECT GRID -->
+          <ul class="project-grid">
+            <!-- Sticksy -->
+            <li class="project-card">
+              <div class="project-media">
+                <span class="project-badge"><span class="dot"></span>Live</span>
+                <img
+                  src="images/sticksy-img.png"
+                  alt="Sticksy sticker shop"
+                  class="project-thumb"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-head">
+                  <h2 class="project-name">Sticksy</h2>
+                  <a
+                    class="project-ext"
+                    href="https://sticksy.no"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Sticksy"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+                <p class="project-sub" id="sticksyHeader">
+                  Unique Stickers for Every Occasion
+                </p>
+                <p class="project-desc" id="sticksyDescription">
+                  Express yourself with high-quality stickers!
+                </p>
+                <div class="tag-row">
+                  <span class="tag">E-commerce</span>
+                  <span class="tag">Web Shop</span>
+                  <span class="tag">Stickers</span>
+                </div>
+                <a
+                  href="https://sticksy.no"
+                  class="btn btn-primary tryItBtn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Try it <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </li>
+
+            <!-- Siege -->
+            <li class="project-card">
+              <div class="project-media">
+                <span class="project-badge"><span class="dot"></span>Live</span>
+                <img
+                  src="images/SiegeImage.png"
+                  alt="Siege strategy game"
+                  class="project-thumb"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-head">
+                  <h2 class="project-name">Siege</h2>
+                  <a
+                    class="project-ext"
+                    href="https://siege.no"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Siege"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+                <p class="project-desc" id="siegeDescription">
+                  An idle online strategy game where you can fight other players,
+                  found new villages and take over the world!
+                </p>
+                <div class="tag-row">
+                  <span class="tag">Strategy</span>
+                  <span class="tag">Multiplayer</span>
+                  <span class="tag">Browser Game</span>
+                </div>
+                <a
+                  href="https://siege.no"
+                  class="btn btn-primary tryItBtn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Try it <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </li>
+
+            <!-- Duobingo -->
+            <li class="project-card">
+              <div class="project-media">
+                <span class="project-badge"><span class="dot"></span>Live</span>
+                <img
+                  src="images/DuoBingoBG.jpg"
+                  alt="Duobingo team building game"
+                  class="project-thumb"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-head">
+                  <h2 class="project-name">Duobingo</h2>
+                  <a
+                    class="project-ext"
+                    href="https://duobingo.no"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Duobingo"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+                <p class="project-desc" id="duobingoDescription">
+                  A teambuilding game perfect to add some fun to your workplace
+                  or friend group. Add custom quirks and play around in the team.
+                </p>
+                <div class="tag-row">
+                  <span class="tag">Team Building</span>
+                  <span class="tag">Party Game</span>
+                  <span class="tag">Web</span>
+                </div>
+                <a
+                  href="https://duobingo.no"
+                  class="btn btn-primary tryItBtn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Try it <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <!-- PET COLLECTION -->
+          <section class="pet-section">
+            <div class="pet-head">
+              <i class="fa-solid fa-paw"></i>
+              <h2 class="pet-title" id="catTitle">Pet collection</h2>
+            </div>
+            <div class="pet-strip">
+              <div class="pet-track" id="petTrack">
+                <img src="images/carousel/carousel1.jpg" alt="My lovely cats" class="pet-img" />
+                <img src="images/carousel/carousel2.jpg" alt="My lovely cats" class="pet-img" />
+                <img src="images/carousel/carousel3.jpg" alt="My lovely cats" class="pet-img" />
+                <img src="images/carousel/carousel4.jpg" alt="My lovely cats" class="pet-img" />
+                <img src="images/carousel/carousel5.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel6.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel7.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel8.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel9.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel10.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel11.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel12.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel13.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel14.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel15.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel16.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel17.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel18.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel19.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel20.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel21.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel22.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel23.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel24.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel25.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel26.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel27.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+                <img src="images/carousel/carousel28.jpg" alt="My lovely cats" class="pet-img" loading="lazy" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer
+        class="relative w-full p-4 bg-main4 text-center border-t border-white/5"
       >
         &copy; 2024 Jonar. All rights reserved.
         <div class="social-media">
@@ -409,18 +286,18 @@
             >Instagram</a
           >
         </div>
-      </div>
+      </footer>
     </div>
+
+    <script>
+      // Duplicate the pet images so the marquee (translateX -50%) loops
+      // seamlessly without a second hand-written copy in the markup.
+      window.addEventListener("load", () => {
+        const track = document.getElementById("petTrack");
+        if (track) {
+          track.innerHTML += track.innerHTML;
+        }
+      });
+    </script>
   </body>
-  <script>
-    window.addEventListener("load", () => {
-      const image = document.getElementById("hover-image");
-      image.addEventListener("mouseover", () => {
-        image.src = "images/Questmaster2.png";
-      });
-      image.addEventListener("mouseout", () => {
-        image.src = "images/Questmaster.png";
-      });
-    });
-  </script>
 </html>

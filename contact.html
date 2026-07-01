@@ -18,166 +18,196 @@
     ></script>
     <link rel="icon" href="/images/me_face.png" sizes="any" />
     <title>Jonar.no - Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/0716b6afca.js"
       crossorigin="anonymous"
     ></script>
-
     <script src="content.js?=v6"></script>
     <script src="shared.js"></script>
-    <link rel="stylesheet" href="contact.css" />
-    <link rel="stylesheet" href="shared.css?v=2" />
     <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="shared.css?v=3" />
+    <link rel="stylesheet" href="contact.css?=v2" />
   </head>
-  <body class="bg-main1 text-white overflow-hidden">
+  <body class="bg-main1 text-white contact-page contact-bg overflow-x-hidden">
     <div id="mouseCircle" class="w-32 h-32 rounded absolute z-0">
       <div class="innerCircle">
         <img src="images/mio_face.png" alt="Mios spinning face" />
       </div>
     </div>
 
-    <div class="flex flex-col h-[100vh]">
+    <div class="flex flex-col min-h-screen">
       <!-- HEADER -->
-      <div
-        class="w-full p-4 bg-main4 text-white text-xs sm:text-sm md:text-lg lg:text-xl flex justify-center z-10"
-      >
-        <nav class="flex">
-          <ul class="flex space-x-4 md:space-x-10 lg:space-x-12 text-center">
-            <li class="hover:text-main5">
-              <i class="fa-solid fa-house text-main8"></i>
-              <a href="index.html" id="home-btn">Home</a>
-            </li>
-            <li class="hover:text-main5">
-              <i class="fa-regular fa-address-card mr-2 text-main8"></i
-              ><a href="about.html " id="about-btn">About</a>
-            </li>
-            <li class="hover:text-main5">
-              <i class="fa-solid fa-book text-main8"></i>
-              <a href="projects.html" id="projects-btn">Projects</a>
-            </li>
-            <li class="hover:text-main5">
-              <i class="fa-solid fa-address-card text-main8"></i>
-              <a href="contact.html" id="contact-btn">Contact</a>
-            </li>
-            <li class="relative hover:text-main5">
-              <i class="fa-solid fa-globe mr-2 text-main8"></i>
-              <select
-                name="languages"
-                id="languages"
-                class="bg-main4 text-white border border-main8 rounded-md px-6 py-1 appearance-none focus:outline-none focus:ring-2 focus:ring-main5 focus:border-transparent"
-                onchange="choose_language(this.value)"
-              >
-                <option
-                  class="bg-main4 text-black"
-                  value=""
-                  selected
-                  disabled
-                  id="lang-option"
-                >
-                  Language
-                </option>
-                <option
-                  class="bg-main4 text-black"
-                  value="english"
-                  id="english-option"
-                >
-                  English
-                </option>
-                <option
-                  class="bg-main4 text-black"
-                  value="norwegian"
-                  id="norwegian-option"
-                >
-                  Norwegian
-                </option>
-              </select>
-              <i
-                class="fa-solid fa-caret-down absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none"
-              ></i>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="z-10">
-        <h1 class="text-center text-3xl mt-4" id="contactTiltle">Contact me</h1>
-        <p class="text-center mb-4" id="contactDescription">
-          If you got a business proposal or want to work with me, reach out on
-          email or phone!
-        </p>
-      </div>
-      <!--MAIN CONTENT-->
-      <div class="grid grid-cols-1 place-items-center mt-8">
-        <!--business card, should be clickable to flip over to display a designed frontside -->
-        <div class="business-card text-md sm:text-lg hover:scale-[101%]">
-          <!--FRONT OF THE BUSINESS CARD-->
-          <div class="card-front bg-gradient-to-r from-main4 to-main9">
-            <i class="fa-solid fa-arrow-right absolute top-4 right-4"></i>
-            <div
-              class="grid grid-cols-1 p-4 h-full place-items-center text-center"
+      <header class="site-header">
+        <div class="nav-inner">
+          <a href="index.html" class="brand" aria-label="Jonar - Home">
+            <span class="brand-mark">JL</span>
+            <span class="brand-name">Jonar</span>
+          </a>
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link">
+              <i class="fa-solid fa-house"></i><span id="home-btn">Home</span>
+            </a>
+            <a href="about.html" class="nav-link">
+              <i class="fa-regular fa-user"></i><span id="about-btn">About</span>
+            </a>
+            <a href="projects.html" class="nav-link">
+              <i class="fa-regular fa-folder-open"></i
+              ><span id="projects-btn">Projects</span>
+            </a>
+            <a href="contact.html" class="nav-link active">
+              <i class="fa-regular fa-envelope"></i
+              ><span id="contact-btn">Contact</span>
+            </a>
+          </nav>
+          <div class="nav-lang">
+            <i class="fa-solid fa-globe nav-lang-globe"></i>
+            <select
+              name="languages"
+              id="languages"
+              onchange="choose_language(this.value)"
             >
-              <div class="">
-                <img
-                  class="w-12 h-12 md:w-24 md:h-24 rounded-full border-2 border-white shadow-lg"
-                  src="images/me.png"
-                  alt="Jonar profile picture"
-                />
-              </div>
-              <div class="flex flex-col h-full">
-                <div class="flex-grow">
-                  <h4 class="text-xl md:text-2xl font-bold">Jonar Larsgard</h4>
-                  <h4 id="contactJobTitle">Full-stack developer</h4>
-                </div>
+              <option value="" selected disabled id="lang-option">Language</option>
+              <option value="english" id="english-option">English</option>
+              <option value="norwegian" id="norwegian-option">Norwegian</option>
+            </select>
+            <i class="fa-solid fa-caret-down nav-lang-caret"></i>
+          </div>
+        </div>
+      </header>
 
-                <div class="flex space-x-2 md:space-x-6 text-sm md:text-lg">
-                  <div class="border-[1px] p-1 rounded">
-                    <h4>
-                      <i class="fa-solid fa-mobile-screen"></i> +4741792159
-                    </h4>
-                  </div>
-                  <div class="border-[1px] p-1 rounded">
-                    <h4>
-                      <i class="fa-solid fa-envelope"></i>
-                      Jonarlarsgard@gmail.com
-                    </h4>
-                  </div>
-                </div>
+      <!-- MAIN CONTENT -->
+      <main class="flex-auto">
+        <div class="contact-shell">
+          <div class="contact-head">
+            <span class="contact-eyebrow">Get in touch</span>
+            <h1 class="contact-title" id="contactTiltle">Contact me</h1>
+            <p class="contact-subtitle" id="contactDescription">
+              If you got a business proposal or want to work with me, reach out
+              on email or phone!
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- LEFT: contact methods -->
+            <div class="methods">
+              <a class="method" href="mailto:Jonarlarsgard@gmail.com">
+                <span class="method-icon"
+                  ><i class="fa-solid fa-envelope"></i
+                ></span>
+                <span class="method-text">
+                  <span class="method-label">Email</span>
+                  <span class="method-value">Jonarlarsgard@gmail.com</span>
+                </span>
+              </a>
+
+              <a class="method" href="tel:+4741792159">
+                <span class="method-icon"
+                  ><i class="fa-solid fa-mobile-screen"></i
+                ></span>
+                <span class="method-text">
+                  <span class="method-label">Phone</span>
+                  <span class="method-value">+47 417 92 159</span>
+                </span>
+              </a>
+
+              <div class="method">
+                <span class="method-icon"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <span class="method-text">
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Oslo, Norway</span>
+                </span>
+              </div>
+
+              <div class="contact-social">
+                <a
+                  class="icon-btn"
+                  href="https://github.com/C-atfish"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  class="icon-btn"
+                  href="https://www.linkedin.com/posts/jonar-larsgard-851004152_a-month-ago-i-completed-my-bachelors-in-activity-7082650659874889728-vaoS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                  class="icon-btn"
+                  href="https://www.instagram.com/siege.game.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
               </div>
             </div>
-          </div>
-          <!--BACK OF THE BUSINESS CARD-->
-          <div
-            class="card-back bg-gradient-to-r from-main9 to-main4 relative overflow-hidden text-white"
-          >
-            <i
-              class="fa-solid fa-arrow-left absolute top-4 right-4 text-lg"
-            ></i>
-            <div class="grid grid-cols-1 place-items-center h-full p-8">
-              <div class="text-2xl font-bold tracking-wide uppercase">
-                Jonar
+
+            <!-- RIGHT: flip business card -->
+            <div class="card-stage">
+              <div class="business-card">
+                <div class="card-inner">
+                  <!-- FRONT -->
+                  <div class="card-front">
+                    <div class="card-glow"></div>
+                    <span class="card-flip-hint">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                    <div class="card-top">
+                      <img
+                        class="card-avatar"
+                        src="images/me.png"
+                        alt="Jonar profile picture"
+                      />
+                      <div>
+                        <div class="card-name">Jonar Larsgard</div>
+                        <div class="card-role" id="contactJobTitle">
+                          Full-stack developer
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-contact">
+                      <div>
+                        <i class="fa-solid fa-mobile-screen"></i> +47 417 92 159
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        Jonarlarsgard@gmail.com
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BACK -->
+                  <div class="card-back">
+                    <span class="card-monogram">Jonar</span>
+                  </div>
+                </div>
               </div>
+              <span class="card-hint">
+                <i class="fa-solid fa-hand-pointer"></i> Click the card to flip
+              </span>
             </div>
           </div>
         </div>
+      </main>
 
-        <!--        <div class="w-64 text-center bg-main2 p-4">
-            <h4>Contact me directly</h4>
-            <form action="" class="">
-                <div>
-                    <p>From</p>
-                    <input type="text">
-                </div>
-                <div>
-                    <p>Message</p>
-                    <textarea cols="20" rows="10"></textarea>
-                </div>
-
-            </form>
-        </div>-->
-      </div>
-      <div class="flex-grow"></div>
-
-      <div class="relative w-full p-4 bg-main4 text-center">
+      <!-- FOOTER -->
+      <footer
+        class="relative w-full p-4 bg-main4 text-center border-t border-white/5"
+      >
         &copy; 2024 Jonar. All rights reserved.
         <div class="social-media">
           <a href="https://github.com/C-atfish" target="_blank">GitHub</a> |
@@ -191,14 +221,15 @@
             >Instagram</a
           >
         </div>
-      </div>
+      </footer>
     </div>
+
+    <script>
+      document
+        .querySelector(".business-card")
+        .addEventListener("click", function () {
+          this.classList.toggle("flipped");
+        });
+    </script>
   </body>
-  <script>
-    document
-      .querySelector(".business-card")
-      .addEventListener("click", function () {
-        this.classList.toggle("flipped");
-      });
-  </script>
 </html>

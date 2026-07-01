@@ -77,3 +77,163 @@ html {
     opacity: 0;
   }
 }
+
+/* ============================================================
+   Shared site navbar (modern) – used on every page
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(30, 29, 32, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-family: "Sora", "Inter", sans-serif;
+}
+
+.nav-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.7rem clamp(1rem, 4vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, #a42559, #e2698f);
+  box-shadow: 0 8px 18px -8px rgba(164, 37, 89, 0.8);
+}
+
+.brand-name {
+  font-size: 1.15rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  color: #c9c2c6;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav-link i {
+  font-size: 0.9rem;
+  color: #8a7f85;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-link:hover i,
+.nav-link.active i {
+  color: #e2698f;
+}
+
+.nav-link.active {
+  color: #fff;
+  background: rgba(226, 105, 143, 0.14);
+}
+
+.nav-lang {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-lang .nav-lang-globe {
+  position: absolute;
+  left: 0.85rem;
+  color: #8a7f85;
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.nav-lang select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 2rem 0.5rem 2.15rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.nav-lang select:focus {
+  outline: none;
+  border-color: #e2698f;
+}
+
+.nav-lang option {
+  background: #252526;
+  color: #fff;
+}
+
+.nav-lang-caret {
+  position: absolute;
+  right: 0.95rem;
+  color: #8a7f85;
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .brand-name {
+    display: none;
+  }
+  .nav-links {
+    gap: 0.1rem;
+  }
+  .nav-link {
+    padding: 0.5rem 0.6rem;
+  }
+  .nav-link span {
+    display: none;
+  }
+  .nav-link i {
+    font-size: 1.1rem;
+  }
+  .nav-lang select {
+    font-size: 0;
+    padding: 0.55rem 1.7rem 0.55rem 2rem;
+  }
+  .nav-lang option {
+    font-size: 0.9rem;
+  }
+}
